@@ -16,7 +16,7 @@ class ContentSeedTest extends TestCase
     {
         $this->seed();
 
-        $this->assertSame(11, ContentBlock::count());
+        $this->assertSame(17, ContentBlock::count());
         $this->assertSame(1, SiteSetting::count());
         $this->assertSame(0, User::count());
 
@@ -24,7 +24,7 @@ class ContentSeedTest extends TestCase
 
         $this->seed();
 
-        $this->assertSame(11, ContentBlock::count());
+        $this->assertSame(17, ContentBlock::count());
         $this->assertSame('Approved heading', ContentBlock::where('key', 'home.hero')->value('heading'));
     }
 }

@@ -1,0 +1,8 @@
+@extends('layouts.public')
+
+@section('title', 'Contact Us')
+
+@section('content')
+    <div class="page-label"><div class="shell">Contact Us</div></div>
+    <section class="section contact-section"><div class="shell contact-grid"><div><p class="eyebrow">Start a Conversation</p><h1 class="display-title">{{ $blocks->get('contact.hero')?->heading ?: 'Let’s Talk Vanilla' }}</h1><p class="section-lead">{{ $blocks->get('contact.hero')?->body ?: '[Temporary] Tell us what you are looking for, and our team will be happy to discuss your vanilla needs.' }}</p></div><div class="contact-card"><h2>Get in touch</h2><div><span>Email</span>@if($settings?->contact_email)<a href="mailto:{{ $settings->contact_email }}">{{ $settings->contact_email }}</a>@else<p class="temporary">[Temporary] Email pending confirmation.</p>@endif</div><div><span>WhatsApp</span>@if($settings?->whatsapp_number)<a href="https://wa.me/{{ preg_replace('/\D+/', '', $settings->whatsapp_number) }}" rel="noopener">{{ $settings->whatsapp_number }}</a>@else<p class="temporary">[Temporary] WhatsApp number pending confirmation.</p>@endif @if($settings?->secondary_whatsapp_number)<a href="https://wa.me/{{ preg_replace('/\D+/', '', $settings->secondary_whatsapp_number) }}" rel="noopener">{{ $settings->secondary_whatsapp_number }}</a>@endif</div><div><span>Address</span><p>{{ $settings?->address ?: '[Temporary] Address pending confirmation.' }}</p></div>@if($settings?->instagram_url)<a class="text-link" href="{{ $settings->instagram_url }}" rel="noopener noreferrer" target="_blank">Instagram <span aria-hidden="true">↗</span></a>@endif</div></div></section>
+@endsection

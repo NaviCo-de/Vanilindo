@@ -46,8 +46,8 @@ Commit menggunakan identitas Git lokal pemilik repo. `.env`, kredensial, file se
 
 ## Informasi yang masih diperlukan
 
-- Screenshot cPanel: versi PHP, kuota disk, serta menu Terminal/SSH.
+- cPanel teridentifikasi: PHP 7.4 aktif dengan pilihan 8.3, kuota disk 500 MB, MariaDB 10.5, SSL self-signed; Terminal/SSH dan document root masih perlu diperiksa saat deployment.
 - Logo dan foto produk asli bila tersedia. Teks dan gambar yang tampil di Canva sudah dapat dibaca; sebagian aset gambar hanya tersedia sebagai versi tampilan, sehingga file sumber tetap lebih baik untuk hasil akhir.
-- Konfirmasi bahwa teks profil dan produk yang terlihat di Canva sudah final, serta pengganti untuk teks template hotel dan artikel sementara; bahasa utama website.
-- Tujuan tombol kontak: WhatsApp, email, atau formulir; nomor/alamat yang disetujui untuk publik.
+- Bahasa utama website adalah Inggris. Teks yang belum final memakai penanda `[Temporary]`; teks hotel/dummy Canva tidak dipakai.
+- Detail kontak yang tampil di Canva telah disetujui untuk publikasi: email, dua nomor WhatsApp, dan alamat. Tombol Contact Us menuju halaman kontak internal yang memuat detail ini.
 - Akun admin awal yang akan digunakan saat serah terima. Password dibuat melalui proses aman, bukan dikirim lewat chat atau disimpan dalam Git.
