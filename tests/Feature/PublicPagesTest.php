@@ -24,7 +24,7 @@ class PublicPagesTest extends TestCase
         $this->get('/about')->assertOk()->assertSee('ANCA Organics');
         $this->get('/products')->assertOk()->assertSee('Papua, Indonesia');
         $this->get('/blog')->assertOk()->assertSee('News and Events');
-        $this->get('/contact')->assertOk()->assertSee('ancaorganicsmarketing@gmail.com')->assertSee('628119980980');
+        $this->get('/contact')->assertOk()->assertSee('ancaorganicsmarketing@gmail.com')->assertSee('+62 811-9980-980');
     }
 
     public function test_only_published_products_are_visible(): void

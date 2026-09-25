@@ -199,6 +199,9 @@ img { max-width: 100%; }
     .mobile-nav a { padding: .85rem .4rem; border-top: 1px solid #ffffff40; text-transform: uppercase; letter-spacing: .15em; font-size: .8rem; }
     .catalog-grid { grid-template-columns: repeat(2, 1fr); }
 }
+@media (max-width: 800px) {
+    .split-grid, .detail-grid, .contact-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 650px) {
     .shell { width: min(100% - 2rem, 1180px); }
     .header-inner { min-height: 72px; }
