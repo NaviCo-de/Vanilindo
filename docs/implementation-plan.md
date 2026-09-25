@@ -32,7 +32,7 @@ Editor mengubah konten di dalam struktur desain yang sudah dibuat. Perubahan tat
 - MySQL pada cPanel untuk data.
 - Node.js dan Composer untuk proses build lokal.
 
-Laravel 13 memerlukan PHP 8.3 atau lebih baru. Versi PHP aktif, ekstensi yang tersedia, kuota disk, document root domain, serta akses Terminal/SSH pada akun cPanel harus diperiksa sebelum versi framework dikunci dan deployment dirancang. Jangan arahkan document root Laravel ke akar proyek; hanya direktori `public` yang boleh dilayani web server.
+Laravel 13 memerlukan PHP 8.3 atau lebih baru. cPanel menyediakan pilihan PHP 8.3, tetapi versi aktif saat pemeriksaan masih 7.4. Hosting memiliki kuota 500 MB dan domain menggunakan sertifikat SSL self-signed; akses Terminal/SSH serta document root masih perlu dipastikan. Semua ini adalah pemeriksaan deployment, bukan penghalang pengembangan lokal. Jangan arahkan document root Laravel ke akar proyek; hanya direktori `public` yang boleh dilayani web server.
 
 ## Tahapan dan commit
 

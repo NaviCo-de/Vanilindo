@@ -4,4 +4,4 @@ Website publik dan panel admin untuk Vanilindo, mengikuti [referensi desain Canv
 
 Rencana implementasi dan kebutuhan yang masih perlu dipastikan ada di [docs/implementation-plan.md](docs/implementation-plan.md).
 
-Stack yang dituju: Laravel, Filament, Blade, Tailwind CSS, dan MySQL. Versi Laravel akan dikunci setelah versi PHP pada hosting cPanel dikonfirmasi.
+Stack: Laravel 13, Filament 5, Blade, Tailwind CSS, dan MySQL. Kerangka Laravel sudah tersedia untuk pengembangan lokal; pengaturan hosting cPanel dilakukan saat tahap deployment.
