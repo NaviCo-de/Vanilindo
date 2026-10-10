@@ -20,12 +20,15 @@ class DatabaseSeeder extends Seeder
             'brand_name' => 'VANILINDO',
             'tagline' => 'Indonesian Soil / World Class Vanilla',
             'contact_email' => 'ancaorganicsmarketing@gmail.com',
-            'whatsapp_number' => '+62 811-8492-209',
+            'whatsapp_number' => '+62 811-8492-208',
             'secondary_whatsapp_number' => '+62 811-9980-980',
             'address' => "Kh moh Mansyur no 164 A\nRT.7/RW.9, Tanah Sereal, Kec. Tambora, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11210",
         ]);
 
         $settings = SiteSetting::first();
+        if ($settings?->whatsapp_number === '+62 811-8492-209') {
+            $settings->update(['whatsapp_number' => '+62 811-8492-208']);
+        }
         if ($settings?->address === 'Kh Moh Mansyur No. 164 A, RT.7/RW.9, Tanah Sereal, Kec. Tambora, Kota Jakarta Barat, DKI Jakarta 11210') {
             $settings->update(['address' => "Kh moh Mansyur no 164 A\nRT.7/RW.9, Tanah Sereal, Kec. Tambora, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11210"]);
         }
