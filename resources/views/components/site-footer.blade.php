@@ -1,8 +1,9 @@
 @props(['settings' => null])
+@php($homeUrl = request()->routeIs('home') ? '' : route('home'))
 
-<footer class="site-footer">
+<footer class="site-footer" id="contact" data-scroll-section aria-label="Contact Vanilindo">
     <div class="footer-content">
-        <a class="footer-brand" href="{{ route('about') }}" aria-label="About ANCA Organics and Vanilindo">
+        <a class="footer-brand" href="{{ $homeUrl }}#about" aria-label="About ANCA Organics and Vanilindo">
             <img class="anca-logo" src="{{ asset('images/canva/anca-organics-hd.png') }}" alt="ANCA Organics" width="263" height="204" loading="lazy">
         </a>
         <div class="footer-grid">
@@ -25,10 +26,10 @@
         </div>
         <div class="footer-bottom">
             <nav aria-label="Footer navigation">
-                <a href="{{ route('home') }}">Home</a>
-                <a href="{{ route('about') }}">About Us</a>
-                <a href="{{ route('products.index') }}">Products</a>
-                <a href="{{ route('blog.index') }}">Blog</a>
+                <a href="{{ $homeUrl }}#home">Home</a>
+                <a href="{{ $homeUrl }}#about">About Us</a>
+                <a href="{{ $homeUrl }}#products">Products</a>
+                <a href="{{ $homeUrl }}#blog">Blog</a>
             </nav>
             <div class="footer-socials">
                 @if($settings?->instagram_url)

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Articles\Pages;
 
 use App\Filament\Resources\Articles\ArticleResource;
+use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
 class EditArticle extends EditRecord
@@ -11,6 +12,6 @@ class EditArticle extends EditRecord
 
     protected function getHeaderActions(): array
     {
-        return [];
+        return [DeleteAction::make()->label('Hapus blog')];
     }
 }

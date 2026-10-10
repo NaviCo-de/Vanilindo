@@ -20,7 +20,13 @@ class ArticleResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedNewspaper;
+
+    protected static ?string $navigationLabel = 'Blog';
+
+    protected static ?string $modelLabel = 'Blog';
+
+    protected static ?string $pluralModelLabel = 'Blog';
 
     public static function form(Schema $schema): Schema
     {

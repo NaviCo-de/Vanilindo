@@ -3,10 +3,12 @@
 namespace Tests\Feature;
 
 use App\Filament\Resources\Articles\Pages\CreateArticle;
+use App\Filament\Resources\Articles\Pages\EditArticle;
 use App\Filament\Resources\ContentBlocks\Pages\EditContentBlock;
 use App\Filament\Resources\Products\Pages\CreateProduct;
 use App\Filament\Resources\SiteSettings\Pages\EditSiteSetting;
 use App\Models\ContentBlock;
+use App\Models\Article;
 use App\Models\Product;
 use App\Models\SiteSetting;
 use App\Models\User;
@@ -50,20 +52,65 @@ class AdminContentCrudTest extends TestCase
 
     public function test_admin_can_create_unpublished_article(): void
     {
+        Storage::fake('public');
+
         Livewire::test(CreateArticle::class)
             ->fillForm([
                 'title' => 'Vanilla Origins',
-                'slug' => 'vanilla-origins',
-                'body' => 'A test article.',
+                'external_url' => 'https://example.com/vanilla-origins',
+                'cover_image_path' => UploadedFile::fake()->image('origins.jpg', 1200, 400),
+                'excerpt' => 'A description of our vanilla origins.',
                 'is_published' => false,
             ])
             ->call('create')
             ->assertHasNoFormErrors();
 
         $this->assertDatabaseHas('articles', [
-            'slug' => 'vanilla-origins',
+            'title' => 'Vanilla Origins',
             'is_published' => false,
         ]);
+    }
+
+    public function test_admin_can_upload_publish_and_edit_a_link_blog_without_slug_or_body(): void
+    {
+        Storage::fake('public');
+
+        Livewire::test(CreateArticle::class)
+            ->fillForm([
+                'title' => 'Vanilla Harvest', 'external_url' => 'https://example.com/harvest',
+                'cover_image_path' => UploadedFile::fake()->image('harvest.png', 1600, 450),
+                'excerpt' => 'Meet the farmers behind our vanilla.', 'is_published' => true,
+            ])
+            ->call('create')->assertHasNoFormErrors();
+
+        $article = Article::where('title', 'Vanilla Harvest')->firstOrFail();
+        $this->assertNotEmpty($article->slug);
+        $this->assertNull($article->body);
+        Storage::disk('public')->assertExists($article->cover_image_path);
+        $this->get('/')->assertOk()->assertSee('Vanilla Harvest')->assertSee('https://example.com/harvest')
+            ->assertSee(Storage::disk('public')->url($article->cover_image_path));
+
+        Livewire::test(EditArticle::class, ['record' => $article->getRouteKey()])
+            ->fillForm(['title' => 'Updated Harvest', 'external_url' => 'https://example.com/new-harvest', 'is_published' => false])
+            ->call('save')->assertHasNoFormErrors();
+        $this->assertSame('https://example.com/new-harvest', $article->fresh()->external_url);
+        $this->get('/')->assertOk()->assertDontSee('Updated Harvest');
+    }
+
+    public function test_blog_requires_all_four_fields_and_rejects_non_web_links(): void
+    {
+        Livewire::test(CreateArticle::class)->fillForm([
+            'title' => '', 'external_url' => '', 'excerpt' => '', 'cover_image_path' => null,
+        ])->call('create')->assertHasFormErrors(['title' => 'required', 'external_url' => 'required', 'excerpt' => 'required', 'cover_image_path' => 'required']);
+
+        Storage::fake('public');
+        foreach (['javascript:alert(1)', 'ftp://example.com/file', 'not-a-url'] as $url) {
+            Livewire::test(CreateArticle::class)->fillForm([
+                'title' => 'Invalid Link', 'external_url' => $url, 'excerpt' => 'Description.',
+                'cover_image_path' => UploadedFile::fake()->image('cover.jpg'),
+            ])->call('create')->assertHasFormErrors(['external_url' => 'url']);
+        }
+        $this->assertDatabaseCount('articles', 0);
     }
 
     public function test_admin_can_upload_product_image(): void

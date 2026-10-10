@@ -1,9 +1,3 @@
-@extends('layouts.public')
-
-@section('title', 'Our Products')
-@section('page_label', 'Our Products')
-
-@section('content')
     @php($origin = $blocks->get('products.origin'))
     <section class="products-origin" aria-labelledby="origin-title">
         <div class="origin-art">
@@ -15,7 +9,7 @@
             <x-media-panel class="papua-photo" :path="$origin?->image_path" fallback="images/canva/papua-community.jpg" :alt="$origin?->image_alt ?: 'Local community in Papua, Indonesia'" />
         </div>
         <div class="origin-copy">
-            <h1 id="origin-title">{{ $origin?->heading ?: 'Where our beans originate from' }}</h1>
+            <h2 id="origin-title">{{ $origin?->heading ?: 'Where our beans originate from' }}</h2>
             @foreach(preg_split('/\n\s*\n/', $origin?->body ?: 'Our vanilla beans originate from Papua. Our vanilla offers a distinctive aroma, rich flavor profile, and natural quality suitable for a wide range of culinary and commercial applications.') as $paragraph)
                 <p>{{ $paragraph }}</p>
             @endforeach
@@ -42,4 +36,3 @@
             <div class="pagination-wrap">{{ $products->links() }}</div>
         </div></section>
     @endif
-@endsection

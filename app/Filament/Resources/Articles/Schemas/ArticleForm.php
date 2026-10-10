@@ -4,7 +4,6 @@ namespace App\Filament\Resources\Articles\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -16,28 +15,31 @@ class ArticleForm
     {
         return $schema
             ->components([
-                TextInput::make('title')->required()->maxLength(255),
-                TextInput::make('slug')
+                TextInput::make('title')->label('Judul')->required()->maxLength(255)->columnSpanFull(),
+                TextInput::make('external_url')
+                    ->label('Link blog')
                     ->required()
-                    ->maxLength(180)
-                    ->regex('/^[a-z0-9]+(?:-[a-z0-9]+)*$/')
-                    ->unique(ignoreRecord: true)
-                    ->helperText('Use lowercase letters, numbers and hyphens. Changing this later changes the article URL.'),
-                Textarea::make('excerpt')->rows(3),
-                MarkdownEditor::make('body')->label('Article body')->required(),
+                    ->url()
+                    ->rule('url:http,https')
+                    ->maxLength(2048)
+                    ->placeholder('https://example.com/blog')
+                    ->helperText('Pengunjung langsung membuka link ini saat kartu blog diklik.')
+                    ->columnSpanFull(),
                 FileUpload::make('cover_image_path')
-                    ->label('Cover image')
+                    ->label('Gambar')
+                    ->required()
                     ->image()
                     ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                     ->disk('public')
                     ->directory('articles')
                     ->visibility('public')
-                    ->maxSize(4096),
-                TextInput::make('cover_image_alt')->label('Cover image description (alt text)')->maxLength(255),
-                Toggle::make('is_published')->label('Visible on website')->default(false),
-                DateTimePicker::make('published_at')->label('Publication date')->helperText('Optional; used as the article date.'),
-                TextInput::make('seo_title')->label('SEO title')->maxLength(255),
-                Textarea::make('seo_description')->label('SEO description')->rows(2)->maxLength(320),
+                    ->maxSize(4096)
+                    ->helperText('JPG, PNG, atau WebP, maksimal 4 MB. Gunakan gambar horizontal.')
+                    ->columnSpanFull(),
+                Textarea::make('excerpt')->label('Deskripsi')->required()->rows(4)->maxLength(2000)->columnSpanFull(),
+                Toggle::make('is_published')->label('Tampilkan di website')->default(true),
+                DateTimePicker::make('published_at')->label('Jadwal tayang (opsional)')
+                    ->timezone('Asia/Jakarta')->helperText('Kosongkan untuk langsung tampil. Waktu menggunakan WIB.'),
             ]);
     }
 }

@@ -7,6 +7,8 @@ use App\Models\ContentBlock;
 use App\Models\Product;
 use App\Models\SiteSetting;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class PublicPageController extends Controller
@@ -25,20 +27,24 @@ class PublicPageController extends Controller
             ...$this->shared(),
             'featuredProducts' => Product::where('is_published', true)
                 ->orderByDesc('is_featured')->orderBy('sort_order')->limit(2)->get(),
+            'products' => Product::where('is_published', true)->orderBy('sort_order')
+                ->paginate(9, ['*'], 'products_page')->withQueryString()->fragment('products'),
+            'articles' => Article::where('is_published', true)
+                ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->orderByRaw('COALESCE(published_at, created_at) DESC')->orderByDesc('id')->get(),
         ]);
     }
 
-    public function about(): View
+    public function about(): RedirectResponse
     {
-        return view('pages.about', $this->shared());
+        return redirect()->to(route('home') . '#about');
     }
 
-    public function products(): View
+    public function products(Request $request): RedirectResponse
     {
-        return view('pages.products', [
-            ...$this->shared(),
-            'products' => Product::where('is_published', true)->orderBy('sort_order')->paginate(9),
-        ]);
+        $query = $request->has('page') ? ['products_page' => $request->query('page')] : [];
+
+        return redirect()->to(route('home', $query) . '#products');
     }
 
     public function product(Product $product): View
@@ -48,19 +54,18 @@ class PublicPageController extends Controller
         return view('pages.product', [...$this->shared(), 'product' => $product]);
     }
 
-    public function blog(): View
+    public function blog(): RedirectResponse
     {
-        return view('pages.blog', [
-            ...$this->shared(),
-            'articles' => Article::where('is_published', true)
-                ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
-                ->orderByDesc('published_at')->orderByDesc('id')->paginate(9),
-        ]);
+        return redirect()->to(route('home') . '#blog');
     }
 
-    public function article(Article $article): View
+    public function article(Article $article): View|RedirectResponse
     {
         abort_unless($article->is_published && (! $article->published_at || $article->published_at->isPast()), 404);
+
+        if ($url = $article->externalLink()) {
+            return redirect()->away($url);
+        }
 
         return view('pages.article', [
             ...$this->shared(),
@@ -72,8 +77,8 @@ class PublicPageController extends Controller
         ]);
     }
 
-    public function contact(): View
+    public function contact(): RedirectResponse
     {
-        return view('pages.contact', $this->shared());
+        return redirect()->to(route('home') . '#contact');
     }
 }

@@ -3,6 +3,7 @@
 @section('title', 'Indonesian Vanilla')
 
 @section('content')
+    <div id="home" data-scroll-section>
     @php($hero = $blocks->get('home.hero'))
     <section class="hero hero-home" aria-labelledby="hero-title">
         <div class="hero-background">
@@ -11,7 +12,7 @@
         <div class="hero-content">
             <h1 id="hero-title">{{ \Illuminate\Support\Str::before($hero?->heading ?: 'Indonesian Soil', ' / ') }}</h1>
             <p class="hero-subtitle">{{ $hero?->body ?: (str_contains($hero?->heading ?: '', ' / ') ? \Illuminate\Support\Str::after($hero->heading, ' / ') : 'World Class Vanilla') }}</p>
-            <a class="button button-light" href="{{ route('contact') }}">Contact Us</a>
+            <a class="button button-light" href="#contact">Contact Us</a>
         </div>
         <p class="hero-corner">Indonesia Vanilla</p>
     </section>
@@ -40,13 +41,13 @@
         <p class="section-lead centered">{{ $varieties?->body ?: 'Our vanilla beans are handled with attention to quality at every stage to preserve their natural characteristics, including aroma, moisture, and flavor profile. Each pod contains naturally aromatic vanilla seeds that can be used across a wide range of culinary and commercial applications.' }}</p>
         <div class="variety-grid">
             @forelse($featuredProducts as $product)
-                <a class="variety-card" href="{{ route('products.show', $product) }}">
+                <a class="variety-card {{ str_contains(strtolower($product->variety ?: $product->name), 'tahit') ? 'variety-tahitensis' : 'variety-planifolia' }}" href="{{ route('products.show', $product) }}">
                     <x-media-panel :path="$product->image_path" :fallback="'images/canva/' . (str_contains(strtolower($product->variety ?: $product->name), 'tahit') ? 'tahitensis' : 'planifolia') . '.png'" :alt="$product->image_alt ?: $product->name" />
                     <h3>{{ $product->name }}</h3>
                 </a>
             @empty
-                <a class="variety-card variety-planifolia" href="{{ route('products.index') }}"><x-media-panel fallback="images/canva/planifolia.png" alt="Bundle of Planifolia vanilla beans" /><h3>Planifolia</h3></a>
-                <a class="variety-card variety-tahitensis" href="{{ route('products.index') }}"><x-media-panel fallback="images/canva/tahitensis.png" alt="Tahitensis vanilla beans" /><h3>Tahitensis</h3></a>
+                <a class="variety-card variety-planifolia" href="#products"><x-media-panel fallback="images/canva/planifolia.png" alt="Bundle of Planifolia vanilla beans" /><h3>Planifolia</h3></a>
+                <a class="variety-card variety-tahitensis" href="#products"><x-media-panel fallback="images/canva/tahitensis.png" alt="Tahitensis vanilla beans" /><h3>Tahitensis</h3></a>
             @endforelse
         </div>
     </section>
@@ -62,5 +63,21 @@
             </div>
             <img class="quality-symbol" src="{{ asset('images/canva/quality-icon.png') }}" alt="" width="324" height="324" loading="lazy">
         </div>
+    </section>
+    </div>
+
+    <section id="about" data-scroll-section aria-labelledby="about-section-title">
+        <h2 class="page-label" id="about-section-title">About Us</h2>
+        @include('sections.about')
+    </section>
+
+    <section id="products" data-scroll-section aria-labelledby="products-section-title">
+        <h2 class="page-label" id="products-section-title">Our Products</h2>
+        @include('sections.products')
+    </section>
+
+    <section id="blog" data-scroll-section aria-labelledby="blog-section-title">
+        <h2 class="page-label" id="blog-section-title">Blog</h2>
+        @include('sections.blog')
     </section>
 @endsection

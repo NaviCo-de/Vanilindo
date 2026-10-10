@@ -11,11 +11,13 @@
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    @hasSection('page_label')
-        <div class="page-label">@yield('page_label')</div>
-    @endif
-    <x-site-header :settings="$settings" />
-    <main id="main">@yield('content')</main>
-    <x-site-footer :settings="$settings" />
+    <div class="site-canvas">
+        @hasSection('page_label')
+            <div class="page-label">@yield('page_label')</div>
+        @endif
+        <x-site-header :settings="$settings" />
+        <main id="main">@yield('content')</main>
+        <x-site-footer :settings="$settings" />
+    </div>
 </body>
 </html>

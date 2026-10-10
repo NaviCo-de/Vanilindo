@@ -1,8 +1,9 @@
 @props(['settings' => null])
+@php($homeUrl = request()->routeIs('home') ? '' : route('home'))
 
 <header class="site-header">
     <div class="header-inner">
-        <a class="brand" href="{{ route('home') }}" aria-label="Vanilindo home">
+        <a class="brand" href="{{ $homeUrl }}#home" aria-label="Vanilindo home">
             @if($settings?->logo_path)
                 <img class="brand-custom" src="{{ \Illuminate\Support\Facades\Storage::url($settings->logo_path) }}" alt="{{ $settings->logo_alt ?: $settings->brand_name }}">
             @else
@@ -11,19 +12,19 @@
             @endif
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
-            <a @if(request()->routeIs('home')) aria-current="page" @endif href="{{ route('home') }}">Home</a>
-            <a @if(request()->routeIs('about')) aria-current="page" @endif href="{{ route('about') }}">About Us</a>
-            <a @if(request()->routeIs('products.*')) aria-current="page" @endif href="{{ route('products.index') }}">Our Products</a>
-            <a @if(request()->routeIs('blog.*')) aria-current="page" @endif href="{{ route('blog.index') }}">Blog</a>
+            <a data-nav-section="home" href="{{ $homeUrl }}#home">Home</a>
+            <a data-nav-section="about" href="{{ $homeUrl }}#about">About Us</a>
+            <a data-nav-section="products" @if(request()->routeIs('products.show')) aria-current="page" @endif href="{{ $homeUrl }}#products">Our Products</a>
+            <a data-nav-section="blog" @if(request()->routeIs('blog.show')) aria-current="page" @endif href="{{ $homeUrl }}#blog">Blog</a>
         </nav>
-        <a class="button button-light header-contact" href="{{ route('contact') }}">Contact Us</a>
+        <a class="button button-light header-contact" data-nav-section="contact" href="{{ $homeUrl }}#contact">Contact Us</a>
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-        <a href="{{ route('home') }}">Home</a>
-        <a href="{{ route('about') }}">About Us</a>
-        <a href="{{ route('products.index') }}">Our Products</a>
-        <a href="{{ route('blog.index') }}">Blog</a>
-        <a href="{{ route('contact') }}">Contact Us</a>
+        <a data-nav-section="home" href="{{ $homeUrl }}#home">Home</a>
+        <a data-nav-section="about" href="{{ $homeUrl }}#about">About Us</a>
+        <a data-nav-section="products" href="{{ $homeUrl }}#products">Our Products</a>
+        <a data-nav-section="blog" href="{{ $homeUrl }}#blog">Blog</a>
+        <a data-nav-section="contact" href="{{ $homeUrl }}#contact">Contact Us</a>
     </nav>
 </header>

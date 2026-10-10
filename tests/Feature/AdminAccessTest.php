@@ -13,6 +13,8 @@ class AdminAccessTest extends TestCase
     public function test_guest_is_sent_to_admin_login(): void
     {
         $this->get('/admin')->assertRedirect('/admin/login');
+        $this->get('/admin/articles')->assertRedirect('/admin/login');
+        $this->get('/admin/articles/create')->assertRedirect('/admin/login');
     }
 
     public function test_regular_user_cannot_open_admin_panel(): void
@@ -20,6 +22,8 @@ class AdminAccessTest extends TestCase
         $user = User::factory()->create();
 
         $this->actingAs($user)->get('/admin')->assertForbidden();
+        $this->actingAs($user)->get('/admin/articles')->assertForbidden();
+        $this->actingAs($user)->get('/admin/articles/create')->assertForbidden();
     }
 
     public function test_admin_can_open_content_resources(): void
