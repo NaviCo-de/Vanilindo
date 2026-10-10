@@ -33,6 +33,9 @@ readable on phones.
 The public site is one continuous page: Home, About Us, Products, Blog, then
 the brown Contact footer. The sticky header and footer navigation use section
 anchors, with enough scroll offset to keep section headings below the header.
+The white About Us, Our Products, and Blog divider labels in the Canva reference
+are editing markers and are omitted from the website at the client's request.
+Their space is removed too, so navigation lands directly on each content section.
 The former standalone page URLs redirect to those anchors. Product and article
 detail pages remain available; their navigation returns to the matching section.
 The product catalog keeps its own pagination and section anchor. Blog posts use

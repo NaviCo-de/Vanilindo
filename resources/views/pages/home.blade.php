@@ -66,18 +66,15 @@
     </section>
     </div>
 
-    <section id="about" data-scroll-section aria-labelledby="about-section-title">
-        <h2 class="page-label" id="about-section-title">About Us</h2>
+    <section id="about" data-scroll-section aria-labelledby="about-title">
         @include('sections.about')
     </section>
 
-    <section id="products" data-scroll-section aria-labelledby="products-section-title">
-        <h2 class="page-label" id="products-section-title">Our Products</h2>
+    <section id="products" data-scroll-section aria-labelledby="origin-title">
         @include('sections.products')
     </section>
 
-    <section id="blog" data-scroll-section aria-labelledby="blog-section-title">
-        <h2 class="page-label" id="blog-section-title">Blog</h2>
+    <section id="blog" data-scroll-section aria-labelledby="blog-title">
         @include('sections.blog')
     </section>
 @endsection
