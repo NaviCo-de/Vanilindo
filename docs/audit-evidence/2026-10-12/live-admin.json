@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-10-12T15:10:49.242255+00:00",
+  "source": "Authenticated native Safari admin; HTTPS image checked independently",
+  "login_verified": true,
+  "admin_name": "adminvanilindo",
+  "admin_email": "vanilindo@gmail.com",
+  "product_id": 1,
+  "product_name": "Deployment verification (draft)",
+  "slug": "deployment-verification-20261012",
+  "published": false,
+  "featured": false,
+  "create_verified": true,
+  "image_url": "https://indonesiavanillas.com/storage/products/01M4RAKHSG7Y1TFECJNAK6MEN4.jpg",
+  "image_status": 200,
+  "image_content_type": "image/jpeg",
+  "image_nosniff": "nosniff",
+  "image_hash_matches_original": true,
+  "draft_marker_absent_from_homepage": true,
+  "edit_verified": true,
+  "edited_field": "image_alt",
+  "edited_value": "Vanilindo vanilla quality sample - deployment verified",
+  "edit_persisted_after_reload": true,
+  "edit_checked_at_utc": "2026-10-12T15:14:13.058510+00:00",
+  "resource_pages_verified": {
+    "dashboard": true,
+    "products": true,
+    "blog": true,
+    "content_blocks": true,
+    "site_settings": true
+  },
+  "resource_counts_observed": {
+    "blog": 0,
+    "content_blocks": 17,
+    "site_settings": 1
+  },
+  "console_errors_live": "not captured"
+}

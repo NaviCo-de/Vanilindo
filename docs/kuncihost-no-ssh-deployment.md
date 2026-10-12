@@ -21,7 +21,7 @@ Semua berada di `dist/cpanel`, yang diabaikan Git:
 | `initial-database.sql` | Import hanya ke DB baru kosong lewat phpMyAdmin. 10 migrasi, 1 site setting, 17 content block. Tidak berisi admin, produk/artikel audit, session, cache, job, ataupun DROP TABLE. |
 | `production.env` | Template privat dengan APP_KEY baru; isi nama DB/user sebenarnya serta password DB, upload ke folder source privat lalu rename menjadi `.env`. Jangan mengunggah ke public_html. |
 
-Admin produksi terpisah: `dist/admin-credentials.txt` dan `dist/create-admin.sql`. Nama `adminvanilindo`, email `vanilindo@gmail.com`; file password dan SQL hash bcrypt memiliki permission 600 dan tidak masuk ZIP. Akun belum ada di hosting. Jangan gunakan kredensial produksi untuk pengujian lokal.
+Admin produksi terpisah: `dist/admin-credentials.txt` dan `dist/create-admin.sql`. Nama `adminvanilindo`, email `vanilindo@gmail.com`; file password dan SQL hash bcrypt memiliki permission 600 dan tidak masuk ZIP. Akun telah dibuat di hosting melalui import user dan login berhasil diverifikasi di Safari; jangan mengimpor ulang. Jangan gunakan kredensial produksi untuk pengujian lokal.
 
 ## Urutan aktivasi
 
@@ -46,10 +46,14 @@ Lihat bukti `docs/audit-evidence/2026-10-12` dan pembaruan pada `production-read
 
 ## Status pelaksanaan terakhir
 
-Database/user aplikasi sudah dibuat; import schema melalui phpMyAdmin berhasil dengan 55 query dan 13 tabel. `.env` sudah terpasang di source privat dengan permission 600, patch privat sudah diekstrak. Folder public awal di-backup ke `/home/indone57/vanilindo/public-before-activation-2026-10-12.zip`; file awal tidak dihapus. Paket public yang diperbaiki telah diunggah 100% dan diekstrak kembali. Seluruh 78 aset cocok hash release dan 200. Homepage, health, login, redirect section, apex/www HTTPS serta HTTP→HTTPS lulus. Jalur privat 403/404, listing media 403, CSP, cookie session dan admin no-store lulus. Bukti `live-http.json` bernilai `passed: true`. Tampilan homepage dan navigasi produk diperiksa di Safari; desain/aset tetap sama. Akun admin masih menunggu user mengimpor SQL credential baru dan login sendiri; live upload/edit admin belum diverifikasi.
+Database/user aplikasi sudah dibuat; import schema melalui phpMyAdmin berhasil dengan 55 query dan 13 tabel. `.env` sudah terpasang di source privat dengan permission 600, patch privat sudah diekstrak. Folder public awal di-backup ke `/home/indone57/vanilindo/public-before-activation-2026-10-12.zip`; file awal tidak dihapus. Paket public yang diperbaiki telah diunggah 100% dan diekstrak kembali. Seluruh 78 aset cocok hash release dan 200. Homepage, health, login, redirect section, apex/www HTTPS serta HTTP→HTTPS lulus. Jalur privat 403/404, listing media 403, CSP, cookie session dan admin no-store lulus. Bukti `live-http.json` bernilai `passed: true`. Tampilan homepage dan navigasi produk diperiksa di Safari; desain/aset tetap sama. User sudah mengimpor SQL credential baru, phpMyAdmin mengonfirmasi 1 query/1 row/id 1 untuk admin; login berhasil. Pembuatan satu produk draft, upload gambar dan edit alt text yang tersimpan setelah reload lulus melalui Safari; gambar HTTPS 200 cocok hash asli. Produk uji tetap tidak terbit (Visible on website dan Featured off), tidak muncul di homepage. Bukti `hosting-admin-import.json` dan `live-admin.json`.
 
 ## Permission archive
 
 Generator ZIP public menggunakan `ZipInfo` dengan mode file 644, termasuk `.htaccess`, CSS/JS/font/gambar. Default `writestr` 600 tidak cocok untuk Apache pada hosting ini. `.env` tetap 600 di source privat; perubahan permission hanya untuk berkas public yang memang harus dibaca web server. Verifikasi semua mode file dan CRC dilakukan saat membangun paket. Setelah ekstraksi, jalankan `python3 scripts/verify_live_deployment.py` dari Mac untuk pemeriksaan read-only HTTPS, seluruh aset terhadap hash release, private paths, CSP, cookie dan redirect. Nilai cookie tidak dicatat.
 
 Smoke kecil hosting: 30 request, concurrency 3, 0 error, p95 1.978,2 ms. Ini berbeda dari stress lokal concurrency 20; kapasitas maksimum hosting belum dinyatakan teruji.
+
+Probe Host palsu diarahkan Apache ke virtual host situs lain (bukan Vanilindo). Tes lokal TrustedHosts lulus, tetapi probe hosting ini tidak memverifikasi middleware aplikasi; lihat `live-host-check.json`.
+
+Batas verifikasi hosting: tidak ada SSH/preflight CLI server; belum ada stress besar/soak test. Penolakan Apache terhadap file nonimage/executable yang benar-benar ada belum dibuktikan live karena kontrol Safari terinterupsi saat menyiapkan fixture kosong. Validasi upload aplikasi sudah lulus pada tes lokal; upload gambar, persistensi edit, akses media HTTPS, private paths dan penolakan directory listing sudah lulus live.

@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-10-12T14:59:17.662882+00:00",
+  "database": "indone57_vanilindo",
+  "source": "phpMyAdmin user-performed import observed through Safari accessibility UI",
+  "file": "create-admin.sql",
+  "queries": 1,
+  "inserted_rows": 1,
+  "user_id": 1,
+  "name": "adminvanilindo",
+  "email": "vanilindo@gmail.com",
+  "is_admin": 1,
+  "credential_hash_recorded": false,
+  "login_verified": true,
+  "login_source": "User confirmed successful login; Safari authenticated admin dashboard and create/edit pages observed"
+}

@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-12T14:59:10.863127+00:00",
+  "tls_server": "indonesiavanillas.com",
+  "request_host": "invalid-host.example",
+  "status": 200,
+  "bytes": 62455,
+  "blocked": false,
+  "scope": "Public request with mismatched Host; no credential transmitted.",
+  "rechecked_at_utc": "2026-10-12T15:09:09.552364+00:00",
+  "response_title": "",
+  "contains_vanilindo": false,
+  "response_excerpt": "Pusat Grosir kerajinan Lampion di Indonesia",
+  "interpretation": "A mismatched Host routes to an unrelated hosting virtual host (lampion site), not Vanilindo. Application-level TrustedHosts passed locally; provider-level rejection is not present and this probe does not exercise Vanilindo middleware."
+}
