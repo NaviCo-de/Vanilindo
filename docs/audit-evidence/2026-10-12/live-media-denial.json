@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-10-12T15:24:34.217228+00:00",
+  "fixture": "empty file, no executable content",
+  "filemanager_existence_verified": true,
+  "checks": [
+    {
+      "url": "https://indonesiavanillas.com/storage/deployment-check-20261012.txt",
+      "status": 403,
+      "blocked": true,
+      "name_verified_in_filemanager": true
+    },
+    {
+      "url": "https://indonesiavanillas.com/storage/deployment-check-20261012.php.jpg",
+      "status": 403,
+      "blocked": true,
+      "name_verified_in_filemanager": true
+    }
+  ],
+  "filemanager_size_bytes": 0,
+  "filemanager_mode": "0644",
+  "rechecked_at_utc": "2026-10-12T15:25:25.124788+00:00",
+  "passed": true,
+  "fixture_removed_from_public_listing": true,
+  "cleanup": "Moved without deletion to /home/indone57/vanilindo/deployment-check-20261012.php.jpg",
+  "private_destination_listing_verified": true
+}
