@@ -1,0 +1,62 @@
+{
+  "/": {
+    "status": 200,
+    "bytes": 13534,
+    "security_headers": true
+  },
+  "/up": {
+    "status": 200,
+    "bytes": 1928,
+    "security_headers": true
+  },
+  "/admin/login": {
+    "status": 200,
+    "bytes": 31116,
+    "security_headers": true
+  },
+  "/about": {
+    "status": 200,
+    "bytes": 13534,
+    "security_headers": true
+  },
+  "/products": {
+    "status": 200,
+    "bytes": 13534,
+    "security_headers": true
+  },
+  "/blog": {
+    "status": 200,
+    "bytes": 13534,
+    "security_headers": true
+  },
+  "/contact": {
+    "status": 200,
+    "bytes": 13534,
+    "security_headers": true
+  },
+  "/.env": {
+    "status": 404
+  },
+  "/vendor/autoload.php": {
+    "status": 404
+  },
+  "/composer.json": {
+    "status": 404
+  },
+  "/storage/logs/laravel.log": {
+    "status": 404
+  },
+  "/.git/config": {
+    "status": 404
+  },
+  "/vanilindo/.env": {
+    "status": 404
+  },
+  "assets": {
+    "count": 20,
+    "all_http_200": true
+  },
+  "design_assets": {
+    "all_public_assets_byte_identical_to_verified_release": true
+  }
+}

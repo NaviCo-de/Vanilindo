@@ -1,0 +1,3175 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.17.0",
+	"@generated": "Sat, 10 Oct 2026 22:38:50",
+	"created": "2026-10-10T15:38:50.672656Z",
+	"insights":[
+		{
+			"level": "Low",
+			"reason": "Warning",
+			"site": "",
+			"key": "insight.log.error",
+			"description": "ZAP errors logged - see the zap.log file for details",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1:8177",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "97"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1:8177",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1:8177",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1:8177",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "99"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1:8177",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1:8177",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "269"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://127.0.0.1:8177",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "26"
+		}
+	],
+	"site":[
+		{
+			"@name": "http://127.0.0.1:8177",
+			"@host": "127.0.0.1",
+			"@port": "8177",
+			"@ssl": "false",
+			"alerts": [
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-10",
+					"alert": "CSP: script-src unsafe-eval",
+					"name": "CSP: script-src unsafe-eval",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[
+						{
+							"id": "5",
+							"uri": "http://127.0.0.1:8177/admin",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-8ClyRFbMXjQ4RbwwlYG0dc7YwLXBBwN5ZOQ97CfQ' 'unsafe-eval'; style-src 'self' 'nonce-8ClyRFbMXjQ4RbwwlYG0dc7YwLXBBwN5ZOQ97CfQ'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob: https://ui-avatars.com; worker-src 'self' blob:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+							"otherinfo": "script-src includes unsafe-eval."
+						},
+						{
+							"id": "17",
+							"uri": "http://127.0.0.1:8177/admin/login",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin\/login",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-JVancBR3cPF0tfgpDe6Io7R7qcBM8AWECPbU4TYB' 'unsafe-eval'; style-src 'self' 'nonce-JVancBR3cPF0tfgpDe6Io7R7qcBM8AWECPbU4TYB'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob: https://ui-avatars.com; worker-src 'self' blob:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+							"otherinfo": "script-src includes unsafe-eval."
+						},
+						{
+							"id": "22",
+							"uri": "http://127.0.0.1:8177/admin/login",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin\/login",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'nonce-enkQ1slTZevZp0yjGxOYlaPXb4DwBR2CvCb1fWP3' 'unsafe-eval'; style-src 'self' 'nonce-enkQ1slTZevZp0yjGxOYlaPXb4DwBR2CvCb1fWP3'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob: https://ui-avatars.com; worker-src 'self' blob:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+							"otherinfo": "script-src includes unsafe-eval."
+						}
+					],
+					"count": "3",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-eval.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://web.dev/articles/csp#resource-options</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "19"
+				},
+				{
+					"pluginid": "10044",
+					"alertRef": "10044-1",
+					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"name": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>",
+					"instances":[
+						{
+							"id": "2",
+							"uri": "http://127.0.0.1:8177/admin",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 33 [http://127.0.0.1:8177/admin/login].\nPredicted response size: 333.\nResponse Body Length: 378."
+						},
+						{
+							"id": "1",
+							"uri": "http://127.0.0.1:8177/products",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 30 [http://127.0.0.1:8177#products].\nPredicted response size: 330.\nResponse Body Length: 366."
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
+					"otherinfo": "<p>Location header URI length: 33 [http://127.0.0.1:8177/admin/login].</p><p>Predicted response size: 333.</p><p>Response Body Length: 378.</p>",
+					"reference": "",
+					"cweid": "201",
+					"wascid": "13",
+					"sourceid": "19"
+				},
+				{
+					"pluginid": "10010",
+					"alertRef": "10010",
+					"alert": "Cookie No HttpOnly Flag",
+					"name": "Cookie No HttpOnly Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>",
+					"instances":[
+						{
+							"id": "18",
+							"uri": "http://127.0.0.1:8177/admin/login",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin\/login",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "Set-Cookie: XSRF-TOKEN",
+							"otherinfo": ""
+						},
+						{
+							"id": "6",
+							"uri": "http://127.0.0.1:8177/blog",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "Set-Cookie: XSRF-TOKEN",
+							"otherinfo": ""
+						},
+						{
+							"id": "19",
+							"uri": "http://127.0.0.1:8177/blog/load-article-100",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-100",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "Set-Cookie: XSRF-TOKEN",
+							"otherinfo": ""
+						},
+						{
+							"id": "4",
+							"uri": "http://127.0.0.1:8177/products",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "Set-Cookie: XSRF-TOKEN",
+							"otherinfo": ""
+						},
+						{
+							"id": "3",
+							"uri": "http://127.0.0.1:8177/products/load-product-100",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-100",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "Set-Cookie: XSRF-TOKEN",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
+					"cweid": "1004",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10037",
+					"alertRef": "10037",
+					"alert": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+					"name": "Server Leaks Information via \"X-Powered-By\" HTTP Response Header Field(s)",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</p>",
+					"instances":[
+						{
+							"id": "8",
+							"uri": "http://127.0.0.1:8177/admin",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: PHP/8.3.33",
+							"otherinfo": ""
+						},
+						{
+							"id": "7",
+							"uri": "http://127.0.0.1:8177/blog",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: PHP/8.3.33",
+							"otherinfo": ""
+						},
+						{
+							"id": "10",
+							"uri": "http://127.0.0.1:8177/products",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: PHP/8.3.33",
+							"otherinfo": ""
+						},
+						{
+							"id": "11",
+							"uri": "http://127.0.0.1:8177/products/load-product-100",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-100",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: PHP/8.3.33",
+							"otherinfo": ""
+						},
+						{
+							"id": "9",
+							"uri": "http://127.0.0.1:8177/sitemap.xml",
+							"nodeName": "http:\/\/127.0.0.1:8177\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "X-Powered-By: PHP/8.3.33",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress \"X-Powered-By\" headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework</p><p>https://www.troyhunt.com/shhh-dont-let-your-response-headers/</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "19"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[
+						{
+							"id": "16",
+							"uri": "http://127.0.0.1:8177/robots.txt",
+							"nodeName": "http:\/\/127.0.0.1:8177\/robots.txt",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "1",
+					"systemic": true,
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "28"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker.</p>",
+					"instances":[
+						{
+							"id": "26",
+							"uri": "http://127.0.0.1:8177/livewire-5f18a164/livewire.min.js?id=0ae8dee3",
+							"nodeName": "http:\/\/127.0.0.1:8177\/livewire-5f18a164\/livewire.min.js (id)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in likely comment: \"//alpinejs.dev/plugins/${r}`,n))}ie(\"modelable\",(e,{expression:t},{effect:r,evaluateLater:n,cleanup:i})=>{let o=n(t),a=()=>{let \", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bSELECT\\b and was detected in likely comment: \"//alpinejs.dev/plugins/${r}`,n))}ie(\"modelable\",(e,{expression:t},{effect:r,evaluateLater:n,cleanup:i})=>{let o=n(t),a=()=>{let \", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "615",
+					"wascid": "13",
+					"sourceid": "25"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[
+						{
+							"id": "20",
+							"uri": "http://127.0.0.1:8177/admin/login",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin\/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script nonce=\"JVancBR3cPF0tfgpDe6Io7R7qcBM8AWECPbU4TYB\">\n                const loadDarkMode = () => {\n                    window.theme = localStorage.getItem('theme') ?? 'system'\n                    if (\n                        window.theme === 'dark' ||\n                        (window.theme === 'system' &&\n                            window.matchMedia('(prefers-color-scheme: dark)')\n                                .matches)\n                    ) {\n                        document.documentElement.classList.add('dark')\n                    }\n                }\n\n                loadDarkMode()\n\n                document.addEventListener('livewire:navigated', loadDarkMode)\n            </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "28",
+							"uri": "http://127.0.0.1:8177/admin/login",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin\/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script nonce=\"enkQ1slTZevZp0yjGxOYlaPXb4DwBR2CvCb1fWP3\">\n                const loadDarkMode = () => {\n                    window.theme = localStorage.getItem('theme') ?? 'system'\n                    if (\n                        window.theme === 'dark' ||\n                        (window.theme === 'system' &&\n                            window.matchMedia('(prefers-color-scheme: dark)')\n                                .matches)\n                    ) {\n                        document.documentElement.classList.add('dark')\n                    }\n                }\n\n                loadDarkMode()\n\n                document.addEventListener('livewire:navigated', loadDarkMode)\n            </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "2",
+					"systemic": true,
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[
+						{
+							"id": "150",
+							"uri": "http://127.0.0.1:8177/",
+							"nodeName": "http:\/\/127.0.0.1:8177\/",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "144",
+							"uri": "http://127.0.0.1:8177/?products_page=2",
+							"nodeName": "http:\/\/127.0.0.1:8177\/ (products_page)",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "12",
+							"uri": "http://127.0.0.1:8177/admin",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin",
+							"method": "GET",
+							"param": "vanilindo-session",
+							"attack": "",
+							"evidence": "vanilindo-session",
+							"otherinfo": "cookie:vanilindo-session"
+						},
+						{
+							"id": "49",
+							"uri": "http://127.0.0.1:8177/admin/login",
+							"nodeName": "http:\/\/127.0.0.1:8177\/admin\/login",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "14",
+							"uri": "http://127.0.0.1:8177/blog",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "138",
+							"uri": "http://127.0.0.1:8177/blog/load-article-1",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-1",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "111",
+							"uri": "http://127.0.0.1:8177/blog/load-article-10",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-10",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "60",
+							"uri": "http://127.0.0.1:8177/blog/load-article-100",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-100",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "430",
+							"uri": "http://127.0.0.1:8177/blog/load-article-101",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-101",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "423",
+							"uri": "http://127.0.0.1:8177/blog/load-article-102",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-102",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "429",
+							"uri": "http://127.0.0.1:8177/blog/load-article-103",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-103",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "420",
+							"uri": "http://127.0.0.1:8177/blog/load-article-104",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-104",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "438",
+							"uri": "http://127.0.0.1:8177/blog/load-article-105",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-105",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "432",
+							"uri": "http://127.0.0.1:8177/blog/load-article-106",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-106",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "441",
+							"uri": "http://127.0.0.1:8177/blog/load-article-107",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-107",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "454",
+							"uri": "http://127.0.0.1:8177/blog/load-article-108",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-108",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "436",
+							"uri": "http://127.0.0.1:8177/blog/load-article-109",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-109",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "106",
+							"uri": "http://127.0.0.1:8177/blog/load-article-11",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-11",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "442",
+							"uri": "http://127.0.0.1:8177/blog/load-article-110",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-110",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "455",
+							"uri": "http://127.0.0.1:8177/blog/load-article-111",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-111",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "448",
+							"uri": "http://127.0.0.1:8177/blog/load-article-112",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-112",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "460",
+							"uri": "http://127.0.0.1:8177/blog/load-article-113",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-113",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "452",
+							"uri": "http://127.0.0.1:8177/blog/load-article-114",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-114",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "462",
+							"uri": "http://127.0.0.1:8177/blog/load-article-115",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-115",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "474",
+							"uri": "http://127.0.0.1:8177/blog/load-article-116",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-116",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "466",
+							"uri": "http://127.0.0.1:8177/blog/load-article-117",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-117",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "481",
+							"uri": "http://127.0.0.1:8177/blog/load-article-118",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-118",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "472",
+							"uri": "http://127.0.0.1:8177/blog/load-article-119",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-119",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "100",
+							"uri": "http://127.0.0.1:8177/blog/load-article-12",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-12",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "470",
+							"uri": "http://127.0.0.1:8177/blog/load-article-120",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-120",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "483",
+							"uri": "http://127.0.0.1:8177/blog/load-article-121",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-121",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "475",
+							"uri": "http://127.0.0.1:8177/blog/load-article-122",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-122",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "490",
+							"uri": "http://127.0.0.1:8177/blog/load-article-123",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-123",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "495",
+							"uri": "http://127.0.0.1:8177/blog/load-article-124",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-124",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "489",
+							"uri": "http://127.0.0.1:8177/blog/load-article-125",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-125",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "487",
+							"uri": "http://127.0.0.1:8177/blog/load-article-126",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-126",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "505",
+							"uri": "http://127.0.0.1:8177/blog/load-article-127",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-127",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "502",
+							"uri": "http://127.0.0.1:8177/blog/load-article-128",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-128",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "512",
+							"uri": "http://127.0.0.1:8177/blog/load-article-129",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-129",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "110",
+							"uri": "http://127.0.0.1:8177/blog/load-article-13",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-13",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "513",
+							"uri": "http://127.0.0.1:8177/blog/load-article-130",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-130",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "521",
+							"uri": "http://127.0.0.1:8177/blog/load-article-131",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-131",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "525",
+							"uri": "http://127.0.0.1:8177/blog/load-article-132",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-132",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "514",
+							"uri": "http://127.0.0.1:8177/blog/load-article-133",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-133",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "526",
+							"uri": "http://127.0.0.1:8177/blog/load-article-134",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-134",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "523",
+							"uri": "http://127.0.0.1:8177/blog/load-article-135",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-135",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "498",
+							"uri": "http://127.0.0.1:8177/blog/load-article-136",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-136",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "519",
+							"uri": "http://127.0.0.1:8177/blog/load-article-137",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-137",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "530",
+							"uri": "http://127.0.0.1:8177/blog/load-article-138",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-138",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "552",
+							"uri": "http://127.0.0.1:8177/blog/load-article-139",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-139",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "104",
+							"uri": "http://127.0.0.1:8177/blog/load-article-14",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-14",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "536",
+							"uri": "http://127.0.0.1:8177/blog/load-article-140",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-140",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "538",
+							"uri": "http://127.0.0.1:8177/blog/load-article-141",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-141",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "535",
+							"uri": "http://127.0.0.1:8177/blog/load-article-142",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-142",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "559",
+							"uri": "http://127.0.0.1:8177/blog/load-article-143",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-143",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "546",
+							"uri": "http://127.0.0.1:8177/blog/load-article-144",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-144",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "550",
+							"uri": "http://127.0.0.1:8177/blog/load-article-145",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-145",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "558",
+							"uri": "http://127.0.0.1:8177/blog/load-article-146",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-146",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "560",
+							"uri": "http://127.0.0.1:8177/blog/load-article-147",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-147",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "566",
+							"uri": "http://127.0.0.1:8177/blog/load-article-148",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-148",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "563",
+							"uri": "http://127.0.0.1:8177/blog/load-article-149",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-149",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "113",
+							"uri": "http://127.0.0.1:8177/blog/load-article-15",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-15",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "568",
+							"uri": "http://127.0.0.1:8177/blog/load-article-150",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-150",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "547",
+							"uri": "http://127.0.0.1:8177/blog/load-article-151",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-151",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "584",
+							"uri": "http://127.0.0.1:8177/blog/load-article-152",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-152",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "571",
+							"uri": "http://127.0.0.1:8177/blog/load-article-153",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-153",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "579",
+							"uri": "http://127.0.0.1:8177/blog/load-article-154",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-154",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "575",
+							"uri": "http://127.0.0.1:8177/blog/load-article-155",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-155",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "596",
+							"uri": "http://127.0.0.1:8177/blog/load-article-156",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-156",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "592",
+							"uri": "http://127.0.0.1:8177/blog/load-article-157",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-157",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "585",
+							"uri": "http://127.0.0.1:8177/blog/load-article-158",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-158",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "589",
+							"uri": "http://127.0.0.1:8177/blog/load-article-159",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-159",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "109",
+							"uri": "http://127.0.0.1:8177/blog/load-article-16",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-16",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "601",
+							"uri": "http://127.0.0.1:8177/blog/load-article-160",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-160",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "603",
+							"uri": "http://127.0.0.1:8177/blog/load-article-161",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-161",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "600",
+							"uri": "http://127.0.0.1:8177/blog/load-article-162",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-162",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "612",
+							"uri": "http://127.0.0.1:8177/blog/load-article-163",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-163",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "613",
+							"uri": "http://127.0.0.1:8177/blog/load-article-164",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-164",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "614",
+							"uri": "http://127.0.0.1:8177/blog/load-article-165",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-165",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "605",
+							"uri": "http://127.0.0.1:8177/blog/load-article-166",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-166",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "618",
+							"uri": "http://127.0.0.1:8177/blog/load-article-167",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-167",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "621",
+							"uri": "http://127.0.0.1:8177/blog/load-article-168",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-168",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "622",
+							"uri": "http://127.0.0.1:8177/blog/load-article-169",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-169",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "122",
+							"uri": "http://127.0.0.1:8177/blog/load-article-17",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-17",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "629",
+							"uri": "http://127.0.0.1:8177/blog/load-article-170",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-170",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "625",
+							"uri": "http://127.0.0.1:8177/blog/load-article-171",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-171",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "646",
+							"uri": "http://127.0.0.1:8177/blog/load-article-172",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-172",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "653",
+							"uri": "http://127.0.0.1:8177/blog/load-article-173",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-173",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "639",
+							"uri": "http://127.0.0.1:8177/blog/load-article-174",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-174",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "647",
+							"uri": "http://127.0.0.1:8177/blog/load-article-175",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-175",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "650",
+							"uri": "http://127.0.0.1:8177/blog/load-article-176",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-176",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "638",
+							"uri": "http://127.0.0.1:8177/blog/load-article-177",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-177",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "649",
+							"uri": "http://127.0.0.1:8177/blog/load-article-178",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-178",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "651",
+							"uri": "http://127.0.0.1:8177/blog/load-article-179",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-179",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "120",
+							"uri": "http://127.0.0.1:8177/blog/load-article-18",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-18",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "654",
+							"uri": "http://127.0.0.1:8177/blog/load-article-180",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-180",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "659",
+							"uri": "http://127.0.0.1:8177/blog/load-article-181",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-181",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "662",
+							"uri": "http://127.0.0.1:8177/blog/load-article-182",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-182",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "664",
+							"uri": "http://127.0.0.1:8177/blog/load-article-183",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-183",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "684",
+							"uri": "http://127.0.0.1:8177/blog/load-article-184",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-184",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "665",
+							"uri": "http://127.0.0.1:8177/blog/load-article-185",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-185",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "689",
+							"uri": "http://127.0.0.1:8177/blog/load-article-186",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-186",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "694",
+							"uri": "http://127.0.0.1:8177/blog/load-article-187",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-187",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "682",
+							"uri": "http://127.0.0.1:8177/blog/load-article-188",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-188",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "674",
+							"uri": "http://127.0.0.1:8177/blog/load-article-189",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-189",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "118",
+							"uri": "http://127.0.0.1:8177/blog/load-article-19",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-19",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "687",
+							"uri": "http://127.0.0.1:8177/blog/load-article-190",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-190",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "688",
+							"uri": "http://127.0.0.1:8177/blog/load-article-191",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-191",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "686",
+							"uri": "http://127.0.0.1:8177/blog/load-article-192",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-192",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "696",
+							"uri": "http://127.0.0.1:8177/blog/load-article-193",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-193",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "695",
+							"uri": "http://127.0.0.1:8177/blog/load-article-194",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-194",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "699",
+							"uri": "http://127.0.0.1:8177/blog/load-article-195",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-195",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "716",
+							"uri": "http://127.0.0.1:8177/blog/load-article-196",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-196",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "703",
+							"uri": "http://127.0.0.1:8177/blog/load-article-197",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-197",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "720",
+							"uri": "http://127.0.0.1:8177/blog/load-article-198",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-198",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "721",
+							"uri": "http://127.0.0.1:8177/blog/load-article-199",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-199",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "70",
+							"uri": "http://127.0.0.1:8177/blog/load-article-2",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-2",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "132",
+							"uri": "http://127.0.0.1:8177/blog/load-article-20",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-20",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "705",
+							"uri": "http://127.0.0.1:8177/blog/load-article-200",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-200",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "711",
+							"uri": "http://127.0.0.1:8177/blog/load-article-201",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-201",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "735",
+							"uri": "http://127.0.0.1:8177/blog/load-article-202",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-202",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "724",
+							"uri": "http://127.0.0.1:8177/blog/load-article-203",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-203",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "731",
+							"uri": "http://127.0.0.1:8177/blog/load-article-204",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-204",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "728",
+							"uri": "http://127.0.0.1:8177/blog/load-article-205",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-205",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "733",
+							"uri": "http://127.0.0.1:8177/blog/load-article-206",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-206",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "737",
+							"uri": "http://127.0.0.1:8177/blog/load-article-207",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-207",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "739",
+							"uri": "http://127.0.0.1:8177/blog/load-article-208",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-208",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "746",
+							"uri": "http://127.0.0.1:8177/blog/load-article-209",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-209",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "128",
+							"uri": "http://127.0.0.1:8177/blog/load-article-21",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-21",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "744",
+							"uri": "http://127.0.0.1:8177/blog/load-article-210",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-210",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "753",
+							"uri": "http://127.0.0.1:8177/blog/load-article-211",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-211",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "751",
+							"uri": "http://127.0.0.1:8177/blog/load-article-212",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-212",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "752",
+							"uri": "http://127.0.0.1:8177/blog/load-article-213",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-213",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "764",
+							"uri": "http://127.0.0.1:8177/blog/load-article-214",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-214",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "772",
+							"uri": "http://127.0.0.1:8177/blog/load-article-215",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-215",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "780",
+							"uri": "http://127.0.0.1:8177/blog/load-article-216",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-216",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "771",
+							"uri": "http://127.0.0.1:8177/blog/load-article-217",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-217",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "774",
+							"uri": "http://127.0.0.1:8177/blog/load-article-218",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-218",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "778",
+							"uri": "http://127.0.0.1:8177/blog/load-article-219",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-219",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "140",
+							"uri": "http://127.0.0.1:8177/blog/load-article-22",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-22",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "787",
+							"uri": "http://127.0.0.1:8177/blog/load-article-220",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-220",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "773",
+							"uri": "http://127.0.0.1:8177/blog/load-article-221",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-221",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "785",
+							"uri": "http://127.0.0.1:8177/blog/load-article-222",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-222",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "790",
+							"uri": "http://127.0.0.1:8177/blog/load-article-223",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-223",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "759",
+							"uri": "http://127.0.0.1:8177/blog/load-article-224",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-224",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "781",
+							"uri": "http://127.0.0.1:8177/blog/load-article-225",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-225",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "793",
+							"uri": "http://127.0.0.1:8177/blog/load-article-226",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-226",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "807",
+							"uri": "http://127.0.0.1:8177/blog/load-article-227",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-227",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "820",
+							"uri": "http://127.0.0.1:8177/blog/load-article-228",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-228",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "794",
+							"uri": "http://127.0.0.1:8177/blog/load-article-229",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-229",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "212",
+							"uri": "http://127.0.0.1:8177/blog/load-article-23",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-23",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "813",
+							"uri": "http://127.0.0.1:8177/blog/load-article-230",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-230",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "806",
+							"uri": "http://127.0.0.1:8177/blog/load-article-231",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-231",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "812",
+							"uri": "http://127.0.0.1:8177/blog/load-article-232",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-232",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "819",
+							"uri": "http://127.0.0.1:8177/blog/load-article-233",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-233",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "816",
+							"uri": "http://127.0.0.1:8177/blog/load-article-234",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-234",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "826",
+							"uri": "http://127.0.0.1:8177/blog/load-article-235",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-235",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "823",
+							"uri": "http://127.0.0.1:8177/blog/load-article-236",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-236",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "831",
+							"uri": "http://127.0.0.1:8177/blog/load-article-237",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-237",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "825",
+							"uri": "http://127.0.0.1:8177/blog/load-article-238",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-238",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "828",
+							"uri": "http://127.0.0.1:8177/blog/load-article-239",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-239",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "221",
+							"uri": "http://127.0.0.1:8177/blog/load-article-24",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-24",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "849",
+							"uri": "http://127.0.0.1:8177/blog/load-article-240",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-240",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "835",
+							"uri": "http://127.0.0.1:8177/blog/load-article-241",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-241",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "843",
+							"uri": "http://127.0.0.1:8177/blog/load-article-242",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-242",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "844",
+							"uri": "http://127.0.0.1:8177/blog/load-article-243",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-243",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "850",
+							"uri": "http://127.0.0.1:8177/blog/load-article-244",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-244",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "857",
+							"uri": "http://127.0.0.1:8177/blog/load-article-245",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-245",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "852",
+							"uri": "http://127.0.0.1:8177/blog/load-article-246",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-246",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "859",
+							"uri": "http://127.0.0.1:8177/blog/load-article-247",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-247",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "863",
+							"uri": "http://127.0.0.1:8177/blog/load-article-248",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-248",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "855",
+							"uri": "http://127.0.0.1:8177/blog/load-article-249",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-249",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "171",
+							"uri": "http://127.0.0.1:8177/blog/load-article-25",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-25",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "861",
+							"uri": "http://127.0.0.1:8177/blog/load-article-250",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-250",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "146",
+							"uri": "http://127.0.0.1:8177/blog/load-article-26",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-26",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "261",
+							"uri": "http://127.0.0.1:8177/blog/load-article-27",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-27",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "242",
+							"uri": "http://127.0.0.1:8177/blog/load-article-28",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-28",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "172",
+							"uri": "http://127.0.0.1:8177/blog/load-article-29",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-29",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "80",
+							"uri": "http://127.0.0.1:8177/blog/load-article-3",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-3",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "255",
+							"uri": "http://127.0.0.1:8177/blog/load-article-30",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-30",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "184",
+							"uri": "http://127.0.0.1:8177/blog/load-article-31",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-31",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "185",
+							"uri": "http://127.0.0.1:8177/blog/load-article-32",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-32",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "149",
+							"uri": "http://127.0.0.1:8177/blog/load-article-33",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-33",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "183",
+							"uri": "http://127.0.0.1:8177/blog/load-article-34",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-34",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "179",
+							"uri": "http://127.0.0.1:8177/blog/load-article-35",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-35",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "182",
+							"uri": "http://127.0.0.1:8177/blog/load-article-36",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-36",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "189",
+							"uri": "http://127.0.0.1:8177/blog/load-article-37",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-37",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "191",
+							"uri": "http://127.0.0.1:8177/blog/load-article-38",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-38",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "200",
+							"uri": "http://127.0.0.1:8177/blog/load-article-39",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-39",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "76",
+							"uri": "http://127.0.0.1:8177/blog/load-article-4",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-4",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "209",
+							"uri": "http://127.0.0.1:8177/blog/load-article-40",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-40",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "210",
+							"uri": "http://127.0.0.1:8177/blog/load-article-41",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-41",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "208",
+							"uri": "http://127.0.0.1:8177/blog/load-article-42",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-42",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "217",
+							"uri": "http://127.0.0.1:8177/blog/load-article-43",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-43",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "195",
+							"uri": "http://127.0.0.1:8177/blog/load-article-44",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-44",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "214",
+							"uri": "http://127.0.0.1:8177/blog/load-article-45",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-45",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "224",
+							"uri": "http://127.0.0.1:8177/blog/load-article-46",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-46",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "207",
+							"uri": "http://127.0.0.1:8177/blog/load-article-47",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-47",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "227",
+							"uri": "http://127.0.0.1:8177/blog/load-article-48",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-48",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "231",
+							"uri": "http://127.0.0.1:8177/blog/load-article-49",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-49",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "93",
+							"uri": "http://127.0.0.1:8177/blog/load-article-5",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-5",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "245",
+							"uri": "http://127.0.0.1:8177/blog/load-article-50",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-50",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "235",
+							"uri": "http://127.0.0.1:8177/blog/load-article-51",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-51",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "241",
+							"uri": "http://127.0.0.1:8177/blog/load-article-52",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-52",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "250",
+							"uri": "http://127.0.0.1:8177/blog/load-article-53",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-53",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "246",
+							"uri": "http://127.0.0.1:8177/blog/load-article-54",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-54",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "259",
+							"uri": "http://127.0.0.1:8177/blog/load-article-55",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-55",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "275",
+							"uri": "http://127.0.0.1:8177/blog/load-article-56",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-56",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "291",
+							"uri": "http://127.0.0.1:8177/blog/load-article-57",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-57",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "288",
+							"uri": "http://127.0.0.1:8177/blog/load-article-58",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-58",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "290",
+							"uri": "http://127.0.0.1:8177/blog/load-article-59",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-59",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "78",
+							"uri": "http://127.0.0.1:8177/blog/load-article-6",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-6",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "294",
+							"uri": "http://127.0.0.1:8177/blog/load-article-60",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-60",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "309",
+							"uri": "http://127.0.0.1:8177/blog/load-article-61",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-61",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "306",
+							"uri": "http://127.0.0.1:8177/blog/load-article-62",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-62",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "326",
+							"uri": "http://127.0.0.1:8177/blog/load-article-63",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-63",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "308",
+							"uri": "http://127.0.0.1:8177/blog/load-article-64",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-64",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "321",
+							"uri": "http://127.0.0.1:8177/blog/load-article-65",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-65",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "317",
+							"uri": "http://127.0.0.1:8177/blog/load-article-66",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-66",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "329",
+							"uri": "http://127.0.0.1:8177/blog/load-article-67",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-67",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "331",
+							"uri": "http://127.0.0.1:8177/blog/load-article-68",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-68",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "318",
+							"uri": "http://127.0.0.1:8177/blog/load-article-69",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-69",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "87",
+							"uri": "http://127.0.0.1:8177/blog/load-article-7",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-7",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "314",
+							"uri": "http://127.0.0.1:8177/blog/load-article-70",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-70",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "338",
+							"uri": "http://127.0.0.1:8177/blog/load-article-71",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-71",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "348",
+							"uri": "http://127.0.0.1:8177/blog/load-article-72",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-72",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "332",
+							"uri": "http://127.0.0.1:8177/blog/load-article-73",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-73",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "341",
+							"uri": "http://127.0.0.1:8177/blog/load-article-74",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-74",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "349",
+							"uri": "http://127.0.0.1:8177/blog/load-article-75",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-75",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "370",
+							"uri": "http://127.0.0.1:8177/blog/load-article-76",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-76",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "356",
+							"uri": "http://127.0.0.1:8177/blog/load-article-77",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-77",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "375",
+							"uri": "http://127.0.0.1:8177/blog/load-article-78",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-78",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "367",
+							"uri": "http://127.0.0.1:8177/blog/load-article-79",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-79",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "90",
+							"uri": "http://127.0.0.1:8177/blog/load-article-8",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-8",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "372",
+							"uri": "http://127.0.0.1:8177/blog/load-article-80",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-80",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "360",
+							"uri": "http://127.0.0.1:8177/blog/load-article-81",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-81",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "377",
+							"uri": "http://127.0.0.1:8177/blog/load-article-82",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-82",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "340",
+							"uri": "http://127.0.0.1:8177/blog/load-article-83",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-83",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "359",
+							"uri": "http://127.0.0.1:8177/blog/load-article-84",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-84",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "347",
+							"uri": "http://127.0.0.1:8177/blog/load-article-85",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-85",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "378",
+							"uri": "http://127.0.0.1:8177/blog/load-article-86",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-86",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "379",
+							"uri": "http://127.0.0.1:8177/blog/load-article-87",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-87",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "384",
+							"uri": "http://127.0.0.1:8177/blog/load-article-88",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-88",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "390",
+							"uri": "http://127.0.0.1:8177/blog/load-article-89",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-89",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "88",
+							"uri": "http://127.0.0.1:8177/blog/load-article-9",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-9",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "388",
+							"uri": "http://127.0.0.1:8177/blog/load-article-90",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-90",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "398",
+							"uri": "http://127.0.0.1:8177/blog/load-article-91",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-91",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "396",
+							"uri": "http://127.0.0.1:8177/blog/load-article-92",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-92",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "397",
+							"uri": "http://127.0.0.1:8177/blog/load-article-93",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-93",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "413",
+							"uri": "http://127.0.0.1:8177/blog/load-article-94",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-94",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "411",
+							"uri": "http://127.0.0.1:8177/blog/load-article-95",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-95",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "406",
+							"uri": "http://127.0.0.1:8177/blog/load-article-96",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-96",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "404",
+							"uri": "http://127.0.0.1:8177/blog/load-article-97",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-97",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "407",
+							"uri": "http://127.0.0.1:8177/blog/load-article-98",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-98",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "417",
+							"uri": "http://127.0.0.1:8177/blog/load-article-99",
+							"nodeName": "http:\/\/127.0.0.1:8177\/blog\/load-article-99",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "13",
+							"uri": "http://127.0.0.1:8177/products",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "55",
+							"uri": "http://127.0.0.1:8177/products/load-product-1",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-1",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "15",
+							"uri": "http://127.0.0.1:8177/products/load-product-100",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-100",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "57",
+							"uri": "http://127.0.0.1:8177/products/load-product-2",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-2",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "39",
+							"uri": "http://127.0.0.1:8177/products/load-product-3",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-3",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "45",
+							"uri": "http://127.0.0.1:8177/products/load-product-4",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-4",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "59",
+							"uri": "http://127.0.0.1:8177/products/load-product-5",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-5",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "48",
+							"uri": "http://127.0.0.1:8177/products/load-product-6",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-6",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "42",
+							"uri": "http://127.0.0.1:8177/products/load-product-7",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-7",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "64",
+							"uri": "http://127.0.0.1:8177/products/load-product-8",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-8",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						},
+						{
+							"id": "67",
+							"uri": "http://127.0.0.1:8177/products/load-product-9",
+							"nodeName": "http:\/\/127.0.0.1:8177\/products\/load-product-9",
+							"method": "GET",
+							"param": "XSRF-TOKEN",
+							"attack": "",
+							"evidence": "XSRF-TOKEN",
+							"otherinfo": "cookie:XSRF-TOKEN\ncookie:vanilindo-session"
+						}
+					],
+					"count": "266",
+					"systemic": false,
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p>cookie:XSRF-TOKEN</p><p>cookie:vanilindo-session</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id/</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "29"
+				},
+				{
+					"pluginid": "10104",
+					"alertRef": "10104",
+					"alert": "User Agent Fuzzer",
+					"name": "User Agent Fuzzer",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>",
+					"instances":[
+						{
+							"id": "866",
+							"uri": "http://127.0.0.1:8177/",
+							"nodeName": "http:\/\/127.0.0.1:8177\/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "865",
+							"uri": "http://127.0.0.1:8177/",
+							"nodeName": "http:\/\/127.0.0.1:8177\/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "864",
+							"uri": "http://127.0.0.1:8177/",
+							"nodeName": "http:\/\/127.0.0.1:8177\/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"systemic": true,
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/wstg</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "574"
+				},
+				{
+					"pluginid": "10031",
+					"alertRef": "10031",
+					"alert": "User Controllable HTML Element Attribute (Potential XSS)",
+					"name": "User Controllable HTML Element Attribute (Potential XSS)",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
+					"instances":[
+						{
+							"id": "148",
+							"uri": "http://127.0.0.1:8177/?products_page=111",
+							"nodeName": "http:\/\/127.0.0.1:8177\/ (products_page)",
+							"method": "GET",
+							"param": "products_page",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\n\nhttp://127.0.0.1:8177/?products_page=111\n\nappears to include user input in:\na(n) [article] tag [aria-label] attribute\n\nThe user input found was:\nproducts_page=111\n\nThe user-controlled value was:\n111 of 250"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>http://127.0.0.1:8177/?products_page=111</p><p></p><p>appears to include user input in:</p><p>a(n) [article] tag [aria-label] attribute</p><p></p><p>The user input found was:</p><p>products_page=111</p><p></p><p>The user-controlled value was:</p><p>111 of 250</p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html</p>",
+					"cweid": "20",
+					"wascid": "20",
+					"sourceid": "331"
+				}
+			]
+		}
+	],
+	"sequences":[
+	]
+
+}

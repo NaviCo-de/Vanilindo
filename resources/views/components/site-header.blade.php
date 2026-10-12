@@ -5,7 +5,7 @@
     <div class="header-inner">
         <a class="brand" href="{{ $homeUrl }}#home" aria-label="Vanilindo home">
             @if($settings?->logo_path)
-                <img class="brand-custom" src="{{ \Illuminate\Support\Facades\Storage::url($settings->logo_path) }}" alt="{{ $settings->logo_alt ?: $settings->brand_name }}">
+                <img class="brand-custom" src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($settings->logo_path) }}" alt="{{ $settings->logo_alt ?: $settings->brand_name }}">
             @else
                 <img class="brand-mark" src="{{ asset('images/canva/vanilindo-mark.png') }}" alt="" width="80" height="150">
                 <span>{{ $settings?->brand_name ?: 'VANILINDO' }}</span>

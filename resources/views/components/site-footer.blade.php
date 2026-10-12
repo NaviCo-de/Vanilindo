@@ -32,8 +32,8 @@
                 <a href="{{ $homeUrl }}#blog">Blog</a>
             </nav>
             <div class="footer-socials">
-                @if($settings?->instagram_url)
-                    <a href="{{ $settings->instagram_url }}" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/canva/instagram.png') }}" alt="" width="48" height="48" loading="lazy"></a>
+                @if($instagramUrl = $settings?->instagramLink())
+                    <a href="{{ $instagramUrl }}" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/canva/instagram.png') }}" alt="" width="48" height="48" loading="lazy"></a>
                 @else
                     <img src="{{ asset('images/canva/instagram.png') }}" alt="" width="48" height="48" loading="lazy">
                 @endif

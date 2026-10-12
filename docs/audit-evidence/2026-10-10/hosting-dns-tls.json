@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "host": "indonesiavanillas.com",
+      "dns_error": "gaierror",
+      "tls_trusted": false,
+      "connection_error": "gaierror"
+    },
+    {
+      "host": "www.indonesiavanillas.com",
+      "dns_error": "gaierror",
+      "tls_trusted": false,
+      "connection_error": "gaierror"
+    }
+  ],
+  "all_trusted": false
+}

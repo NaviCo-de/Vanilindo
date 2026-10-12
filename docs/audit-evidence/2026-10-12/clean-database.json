@@ -1,0 +1,16 @@
+{
+    "database": "local clean release database",
+    "counts": {
+        "users": 0,
+        "products": 0,
+        "articles": 0,
+        "site_settings": 1,
+        "content_blocks": 17,
+        "migrations": 10,
+        "sessions": 0,
+        "cache": 0,
+        "jobs": 0,
+        "failed_jobs": 0
+    },
+    "audit_fixtures": false
+}

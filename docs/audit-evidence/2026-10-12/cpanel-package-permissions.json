@@ -1,0 +1,9 @@
+{
+  "public_archive_sha256": "24c0745709f25dfcef0c6504052112a3bb62bcd931b0ddfe5f6f7edf2fce43a9",
+  "entries": 81,
+  "all_public_file_modes": "0644",
+  "crc": "passed",
+  "unchanged_files_compared_to_audited_release": 79,
+  "private_env_permission": "0600",
+  "reason": "Apache requires readable public assets and htaccess rules; private env remains owner-only."
+}

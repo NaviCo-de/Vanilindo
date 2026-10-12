@@ -1,0 +1,72 @@
+{
+  "indonesiavanillas.com": {
+    "trusted": true,
+    "issuer": [
+      [
+        [
+          "countryName",
+          "US"
+        ]
+      ],
+      [
+        [
+          "organizationName",
+          "Let's Encrypt"
+        ]
+      ],
+      [
+        [
+          "commonName",
+          "YR1"
+        ]
+      ]
+    ],
+    "expires": "Jan 10 12:41:47 2027 GMT",
+    "san": [
+      [
+        "DNS",
+        "indonesiavanillas.com"
+      ],
+      [
+        "DNS",
+        "www.indonesiavanillas.com"
+      ]
+    ],
+    "http_status": 200
+  },
+  "www.indonesiavanillas.com": {
+    "trusted": true,
+    "issuer": [
+      [
+        [
+          "countryName",
+          "US"
+        ]
+      ],
+      [
+        [
+          "organizationName",
+          "Let's Encrypt"
+        ]
+      ],
+      [
+        [
+          "commonName",
+          "YR1"
+        ]
+      ]
+    ],
+    "expires": "Jan 10 12:41:47 2027 GMT",
+    "san": [
+      [
+        "DNS",
+        "indonesiavanillas.com"
+      ],
+      [
+        "DNS",
+        "www.indonesiavanillas.com"
+      ]
+    ],
+    "http_status": 200
+  }
+}

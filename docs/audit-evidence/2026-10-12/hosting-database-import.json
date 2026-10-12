@@ -1,0 +1,19 @@
+{
+  "database": "indone57_vanilindo",
+  "observed_via": "cPanel phpMyAdmin",
+  "import_file": "initial-database.sql",
+  "import_result": "success",
+  "queries": 55,
+  "tables": 13,
+  "counts": {
+    "migrations": 10,
+    "site_settings": 1,
+    "content_blocks": 17,
+    "users": 0,
+    "articles": 0,
+    "products": 0,
+    "sessions": 0,
+    "cache": 0,
+    "jobs": 0
+  }
+}

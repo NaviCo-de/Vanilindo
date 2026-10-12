@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "passed": true,
+      "php_version_header_absent": true
+    },
+    {
+      "route": "/admin/login",
+      "status": 200,
+      "passed": true,
+      "php_version_header_absent": true
+    },
+    {
+      "route": "/products/load-product-100",
+      "status": 200,
+      "passed": true,
+      "php_version_header_absent": true
+    },
+    {
+      "route": "/.env",
+      "status": 404,
+      "passed": true,
+      "php_version_header_absent": true
+    },
+    {
+      "route": "/vendor/autoload.php",
+      "status": 404,
+      "passed": true,
+      "php_version_header_absent": true
+    }
+  ]
+}

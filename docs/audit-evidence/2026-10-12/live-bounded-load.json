@@ -1,0 +1,192 @@
+{
+  "checked_at_utc": "2026-10-12T14:56:03.760127+00:00",
+  "target": "https://indonesiavanillas.com",
+  "concurrency": 3,
+  "requests": 30,
+  "errors": 0,
+  "p95_ms": 1978.2,
+  "elapsed_seconds": 6.74,
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 1018.16
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 406.08
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 714.79
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 456.97
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 207.22
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 444.91
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 385.77
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 215.07
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 475.26
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 601.34
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 397.59
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 390.67
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 380.34
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 176.32
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 1978.2
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 644.72
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 304.16
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 969.8
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 719.32
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 604.99
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 2698.01
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 816.17
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 583.63
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 775.91
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 582.47
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 440.32
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 694.83
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "ms": 498.86
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "ok": true,
+      "ms": 271.96
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "ok": true,
+      "ms": 586.81
+    }
+  ],
+  "scope": "Small production smoke only, not hosting stress or maximum-capacity evidence."
+}

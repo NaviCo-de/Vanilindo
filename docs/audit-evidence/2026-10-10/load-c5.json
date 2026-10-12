@@ -1,0 +1,21 @@
+{
+  "target": "http://127.0.0.1:8177",
+  "concurrency": 5,
+  "requests": 300,
+  "elapsed_seconds": 5.8,
+  "requests_per_second": 51.73,
+  "p50_ms": 45.31,
+  "p95_ms": 230.58,
+  "max_ms": 290.35,
+  "errors": 0,
+  "status_counts": {
+    "200": 250,
+    "302": 50
+  },
+  "threshold": {
+    "max_errors": 0,
+    "p95_limit_ms": 2000
+  },
+  "passed": true,
+  "failure_samples": []
+}

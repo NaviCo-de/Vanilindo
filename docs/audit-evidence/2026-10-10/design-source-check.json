@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "file": "resources/css/app.css",
+      "unchanged_from_HEAD": true,
+      "sha256": "d2a5c382f588eed72d6eac5b4df67afe4db967a478007b8b43240047db2c623e"
+    },
+    {
+      "file": "resources/js/app.js",
+      "unchanged_from_HEAD": true,
+      "sha256": "6aa22ed4ec314f9aa8322782483f1985e9b8406d090606591209ceb72df8c025"
+    }
+  ]
+}

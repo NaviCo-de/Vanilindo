@@ -1,0 +1,213 @@
+{
+  "registry": {
+    "http_status": 200,
+    "data": {
+      "objectClassName": "domain",
+      "handle": "3144618856_DOMAIN_COM-VRSN",
+      "ldhName": "INDONESIAVANILLAS.COM",
+      "links": [
+        {
+          "value": "https://rdap.verisign.com/com/v1/domain/indonesiavanillas.com",
+          "rel": "self",
+          "href": "https://rdap.verisign.com/com/v1/domain/indonesiavanillas.com",
+          "type": "application/rdap+json"
+        },
+        {
+          "value": "https://rdap.verisign.com/com/v1/domain/indonesiavanillas.com",
+          "rel": "related",
+          "href": "https://rdap.liqu.id/domain/INDONESIAVANILLAS.COM",
+          "type": "application/rdap+json"
+        }
+      ],
+      "status": [
+        "client hold",
+        "client transfer prohibited"
+      ],
+      "entities": [
+        {
+          "objectClassName": "entity",
+          "handle": "1478",
+          "roles": [
+            "registrar"
+          ],
+          "links": [
+            {
+              "href": "http://www.idwebhost.com",
+              "type": "text/html",
+              "value": "https://rdap.liqu.id/",
+              "rel": "about"
+            }
+          ],
+          "publicIds": [
+            {
+              "type": "IANA Registrar ID",
+              "identifier": "1478"
+            }
+          ],
+          "vcardArray": [
+            "vcard",
+            [
+              [
+                "version",
+                {},
+                "text",
+                "4.0"
+              ],
+              [
+                "fn",
+                {},
+                "text",
+                "CV. Jogjacamp"
+              ]
+            ]
+          ],
+          "entities": [
+            {
+              "objectClassName": "entity",
+              "roles": [
+                "abuse"
+              ],
+              "vcardArray": [
+                "vcard",
+                [
+                  [
+                    "version",
+                    {},
+                    "text",
+                    "4.0"
+                  ],
+                  [
+                    "fn",
+                    {},
+                    "text",
+                    ""
+                  ],
+                  [
+                    "tel",
+                    {
+                      "type": "voice"
+                    },
+                    "uri",
+                    "tel:+62 82141570000"
+                  ],
+                  [
+                    "email",
+                    {},
+                    "text",
+                    "abuse@resellercamp.com"
+                  ]
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "eventAction": "registration",
+          "eventDate": "2026-09-21T04:17:43Z"
+        },
+        {
+          "eventAction": "expiration",
+          "eventDate": "2027-09-21T04:17:43Z"
+        },
+        {
+          "eventAction": "last changed",
+          "eventDate": "2026-10-07T07:50:30Z"
+        },
+        {
+          "eventAction": "last update of RDAP database",
+          "eventDate": "2026-10-10T16:12:19Z"
+        }
+      ],
+      "secureDNS": {
+        "delegationSigned": false
+      },
+      "nameservers": [
+        {
+          "objectClassName": "nameserver",
+          "ldhName": "NS5.KUNCIHOST.COM"
+        },
+        {
+          "objectClassName": "nameserver",
+          "ldhName": "NS6.KUNCIHOST.COM"
+        }
+      ],
+      "rdapConformance": [
+        "rdap_level_0",
+        "icann_rdap_technical_implementation_guide_1",
+        "icann_rdap_response_profile_1"
+      ],
+      "notices": [
+        {
+          "title": "Terms of Service",
+          "description": [
+            "Service subject to Terms of Use."
+          ],
+          "links": [
+            {
+              "href": "https://www.verisign.com/domain-names/registration-data-access-protocol/terms-service/index.xhtml",
+              "type": "text/html",
+              "value": "https://rdap.verisign.com/com/v1/domain/indonesiavanillas.com",
+              "rel": "terms-of-service"
+            }
+          ]
+        },
+        {
+          "title": "Status Codes",
+          "description": [
+            "For more information on domain status codes, please visit https://icann.org/epp"
+          ],
+          "links": [
+            {
+              "href": "https://icann.org/epp",
+              "type": "text/html",
+              "value": "https://rdap.verisign.com/com/v1/domain/indonesiavanillas.com",
+              "rel": "glossary"
+            }
+          ]
+        },
+        {
+          "title": "RDDS Inaccuracy Complaint Form",
+          "description": [
+            "URL of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf"
+          ],
+          "links": [
+            {
+              "href": "https://icann.org/wicf",
+              "type": "text/html",
+              "value": "https://rdap.verisign.com/com/v1/domain/indonesiavanillas.com",
+              "rel": "help"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dns": {
+    "http_status": 200,
+    "data": {
+      "Status": 3,
+      "TC": false,
+      "RD": true,
+      "RA": true,
+      "AD": false,
+      "CD": false,
+      "Question": [
+        {
+          "name": "indonesiavanillas.com.",
+          "type": 2
+        }
+      ],
+      "Authority": [
+        {
+          "name": "com.",
+          "type": 6,
+          "TTL": 900,
+          "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1791648724 1800 900 604800 900"
+        }
+      ],
+      "Comment": "Response from 2001:502:7094::30."
+    }
+  }
+}

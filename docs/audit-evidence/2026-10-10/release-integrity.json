@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "sha256": "6c61b546ba9fd02abda913ab6a1a0ea5228e7639b71ea40cfdd81c7645fab08a",
+  "entries": 14387,
+  "excluded_private_and_dev_files": true,
+  "source_matches_final_security_files": true
+}

@@ -28,7 +28,7 @@ class SiteSettingForm
                 TextInput::make('whatsapp_number')->tel()->maxLength(32)->helperText('Use international format, e.g. 62812…'),
                 TextInput::make('secondary_whatsapp_number')->label('Second WhatsApp number')->tel()->maxLength(32)->helperText('Optional; use international format.'),
                 Textarea::make('address')->rows(3),
-                TextInput::make('instagram_url')->url()->maxLength(255),
+                TextInput::make('instagram_url')->url()->rule('url:http,https')->maxLength(255),
                 Textarea::make('meta_description')->label('Default SEO description')->rows(3)->maxLength(320),
             ]);
     }

@@ -1,0 +1,1048 @@
+{
+  "checked_at_utc": "2026-10-12T14:21:10.190057+00:00",
+  "base": "https://indonesiavanillas.com",
+  "tls_validation": "default trusted SSL validation enabled",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/",
+      "bytes": 13718,
+      "elapsed_ms": 165,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-57LBPkqoWoySfVbB8u9YhUhXcBjRQ8EvivcrgWra'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": "PHP/8.3.35"
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "Indonesian Vanilla | Vanilindo"
+      ]
+    },
+    {
+      "path": "/up",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/up",
+      "bytes": 1251,
+      "elapsed_ms": 63,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        " 404 Not Found\r\n"
+      ]
+    },
+    {
+      "path": "/about",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/about",
+      "bytes": 1251,
+      "elapsed_ms": 50,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        " 404 Not Found\r\n"
+      ]
+    },
+    {
+      "path": "/products",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/products",
+      "bytes": 1251,
+      "elapsed_ms": 76,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        " 404 Not Found\r\n"
+      ]
+    },
+    {
+      "path": "/blog",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/blog",
+      "bytes": 1251,
+      "elapsed_ms": 62,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        " 404 Not Found\r\n"
+      ]
+    },
+    {
+      "path": "/contact",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/contact",
+      "bytes": 1251,
+      "elapsed_ms": 88,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        " 404 Not Found\r\n"
+      ]
+    },
+    {
+      "path": "/admin",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/admin",
+      "bytes": 1251,
+      "elapsed_ms": 35,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        " 404 Not Found\r\n"
+      ]
+    },
+    {
+      "path": "/admin/login",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/admin/login",
+      "bytes": 1251,
+      "elapsed_ms": 64,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        " 404 Not Found\r\n"
+      ]
+    }
+  ],
+  "private_and_media_paths": [
+    {
+      "path": "/.env",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/.env",
+      "bytes": 1251,
+      "elapsed_ms": 56,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/vanilindo/.env",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/vanilindo/.env",
+      "bytes": 1251,
+      "elapsed_ms": 75,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/vendor/autoload.php",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/vendor/autoload.php",
+      "bytes": 1251,
+      "elapsed_ms": 140,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/composer.json",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/composer.json",
+      "bytes": 1251,
+      "elapsed_ms": 69,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/logs/laravel.log",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/storage/logs/laravel.log",
+      "bytes": 1251,
+      "elapsed_ms": 49,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/.git/config",
+      "status": 403,
+      "url": "https://indonesiavanillas.com/.git/config",
+      "bytes": 1242,
+      "elapsed_ms": 116,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/probe.txt",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/storage/probe.txt",
+      "bytes": 1251,
+      "elapsed_ms": 80,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/probe.php.jpg",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/storage/probe.php.jpg",
+      "bytes": 1251,
+      "elapsed_ms": 1084,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/storage/",
+      "bytes": 1335,
+      "elapsed_ms": 162,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": null,
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/php.ini",
+      "status": 403,
+      "url": "https://indonesiavanillas.com/php.ini",
+      "bytes": 1242,
+      "elapsed_ms": 49,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/.user.ini",
+      "status": 403,
+      "url": "https://indonesiavanillas.com/.user.ini",
+      "bytes": 1242,
+      "elapsed_ms": 79,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    }
+  ],
+  "redirects": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "http://indonesiavanillas.com/",
+      "bytes": 13695,
+      "elapsed_ms": 101,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-WYxEey5f3TiC3DbXRFBl0ySCTzucZVYT7TsChO3A'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": "PHP/8.3.35"
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "url": "http://www.indonesiavanillas.com/",
+      "bytes": 13787,
+      "elapsed_ms": 90,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-RGc7HC411WNCzNJ11UpqjhlYcfHEdssIJEj2ATIa'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": "PHP/8.3.35"
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://www.indonesiavanillas.com/",
+      "bytes": 13810,
+      "elapsed_ms": 1349,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-wAdtUJKkIIP8UUGpzudkMBnZmZVb8Pkt07H8ZgOy'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": "PHP/8.3.35"
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "build/assets/app-BUUOQJZk.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "build/assets/app-DSQHrc9j.css",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "build/manifest.json",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "css/filament/filament/app.css",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "favicon.ico",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Catchy_Mager.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Coco-Gothic-Bold.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Coco-Gothic-Regular.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Glacial-Indifference-Regular.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Lora-BoldItalic.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Lora.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Poppins-Bold.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/canva/Poppins-Regular.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/index.css",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-cyrillic-ext-wght-normal-SP7Z6XGK.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-cyrillic-wght-normal-DR6K5BQD.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-greek-ext-wght-normal-A2J6H3EX.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-greek-wght-normal-ZABHMKQG.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-latin-ext-wght-normal-ZIT2UBIY.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-latin-wght-normal-DIHYUR35.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-vietnamese-wght-normal-VWEHJHBA.woff2",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/about-background.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/anca-organics-hd.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/anca-organics.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/blog-background.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/consistency-hd.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/consistency.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/footer-background.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/home-hero.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/indonesia-map.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/instagram.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/papua-community.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/papua-ocean.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/planifolia.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/planifolia.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/quality-background.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/quality-hd.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/quality-icon.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/quality.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/tahitensis.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/tahitensis.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/transparency-hd.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/transparency.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/values-background.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/vanilindo-mark.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/vanilla-background.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/vanilla-bowl.jpg",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/vanilla-bowl.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "images/canva/whatsapp.png",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/actions/actions.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/filament/app.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/filament/echo.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/checkbox-list.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/code-editor.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/color-picker.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/date-time-picker.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/file-upload.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/key-value.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/markdown-editor.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/rich-editor.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/select.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/slider.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/tags-input.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/forms/components/textarea.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/notifications/notifications.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/schemas/components/actions.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/schemas/components/tabs.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/schemas/components/wizard.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/schemas/schemas.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/support/support.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/tables/components/columns/checkbox.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/tables/components/columns/select.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/tables/components/columns/text-input.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/tables/components/columns/toggle.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/tables/tables.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/widgets/components/chart.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "js/filament/widgets/components/stats-overview/stat/chart.js",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    },
+    {
+      "path": "robots.txt",
+      "status": 403,
+      "bytes": 1242,
+      "sha256": "7271dd5c11fb9a1052a5e91a09afbe7d148fd3388dc51c338df62a0a16f06739",
+      "matches_release": false
+    }
+  ],
+  "assets_all_match": false
+}

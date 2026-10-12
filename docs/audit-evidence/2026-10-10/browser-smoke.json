@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "check": "public-1440",
+      "passed": true,
+      "blogSlides": 250
+    },
+    {
+      "check": "public-390",
+      "passed": true,
+      "blogSlides": 250
+    },
+    {
+      "check": "admin-login",
+      "passed": true
+    },
+    {
+      "check": "admin-upload-publish-and-public-storage",
+      "passed": true
+    },
+    {
+      "check": "admin-edit-existing-image-and-persist",
+      "passed": true
+    },
+    {
+      "check": "all-admin-resources-render",
+      "passed": true
+    },
+    {
+      "check": "login-brute-force-throttle",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "path": "/.env",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/composer.json",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/vendor/autoload.php",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/storage/logs/laravel.log",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/admin/products",
+      "status": 302,
+      "passed": true
+    },
+    {
+      "path": "/admin/articles/create",
+      "status": 302,
+      "passed": true
+    },
+    {
+      "check": "untrusted-host",
+      "status": 400,
+      "passed": true
+    }
+  ]
+}

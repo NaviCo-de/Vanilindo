@@ -1,0 +1,38 @@
+{
+  "indonesiavanillas.com": {
+    "dns_status": 0,
+    "answers": [
+      {
+        "name": "indonesiavanillas.com.",
+        "type": 1,
+        "TTL": 14400,
+        "data": "103.166.157.172"
+      }
+    ],
+    "tls": {
+      "trusted": false,
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1032)"
+    }
+  },
+  "www.indonesiavanillas.com": {
+    "dns_status": 0,
+    "answers": [
+      {
+        "name": "www.indonesiavanillas.com.",
+        "type": 5,
+        "TTL": 14400,
+        "data": "indonesiavanillas.com."
+      },
+      {
+        "name": "indonesiavanillas.com.",
+        "type": 1,
+        "TTL": 14400,
+        "data": "103.166.157.172"
+      }
+    ],
+    "tls": {
+      "trusted": false,
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1032)"
+    }
+  }
+}

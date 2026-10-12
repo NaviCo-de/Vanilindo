@@ -1,0 +1,1161 @@
+{
+  "checked_at_utc": "2026-10-12T14:54:11.493855+00:00",
+  "base": "https://indonesiavanillas.com",
+  "tls_validation": "default trusted SSL validation enabled",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/",
+      "bytes": 13718,
+      "elapsed_ms": 213,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-omSvTE7PJr3EMitSy5qIkVKCrtkiSgQIVRQYglsp'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "Indonesian Vanilla | Vanilindo"
+      ]
+    },
+    {
+      "path": "/up",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/up",
+      "bytes": 1928,
+      "elapsed_ms": 82,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-aoZLSpdoarqEf1q2D18raOw6O4lo92X3VqNupbOL'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [],
+      "title": [
+        "Vanilindo"
+      ]
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/#about",
+      "bytes": 13718,
+      "elapsed_ms": 176,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-UbyiX1ZPSd8LwqanHEBTtY21rm74iVCNTPFrMQBG'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "Indonesian Vanilla | Vanilindo"
+      ]
+    },
+    {
+      "path": "/products",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/#products",
+      "bytes": 13718,
+      "elapsed_ms": 1273,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-EUmvKMajLA7lvgH0oYSHMtLlF4z3cJlcjoVIjPMB'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "Indonesian Vanilla | Vanilindo"
+      ]
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/#blog",
+      "bytes": 13718,
+      "elapsed_ms": 468,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-sTcg9vN4ZB6dCjpIx4ZiXPMV0L2ll3PYBF6yfWGy'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "Indonesian Vanilla | Vanilindo"
+      ]
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/#contact",
+      "bytes": 13718,
+      "elapsed_ms": 531,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-eG43WcsfSwlJTFGLmS5WQpAvAZwnLwc1UCpI3YHH'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "Indonesian Vanilla | Vanilindo"
+      ]
+    },
+    {
+      "path": "/admin",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/admin/login",
+      "bytes": 31220,
+      "elapsed_ms": 1335,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-65ATsFxKNgm4bOBARfr7nJaf0v6m4gORU2HCNLF8' 'unsafe-eval'; style-src 'self' 'nonce-65ATsFxKNgm4bOBARfr7nJaf0v6m4gORU2HCNLF8'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob: https://ui-avatars.com; worker-src 'self' blob:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-store, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "\n            Login\n             - \n            Vanilindo Admin\n        "
+      ]
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/admin/login",
+      "bytes": 31220,
+      "elapsed_ms": 279,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-GI6MXT3z8Q1iIOVvm8HJpWnOVyOLlte5NsW4xUv1' 'unsafe-eval'; style-src 'self' 'nonce-GI6MXT3z8Q1iIOVvm8HJpWnOVyOLlte5NsW4xUv1'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob: https://ui-avatars.com; worker-src 'self' blob:; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-store, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ],
+      "title": [
+        "\n            Login\n             - \n            Vanilindo Admin\n        "
+      ]
+    }
+  ],
+  "private_and_media_paths": [
+    {
+      "path": "/.env",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/.env",
+      "bytes": 6684,
+      "elapsed_ms": 95,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-JFWyA4Bh1wNnkfi5F9INBIPGuyqY1mTOWPuqgHIb'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/vanilindo/.env",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/vanilindo/.env",
+      "bytes": 6684,
+      "elapsed_ms": 67,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-n9MPAAkpsOUoXj9RmeNhvmAt8rbgY9J5qJRABd0q'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/vendor/autoload.php",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/vendor/autoload.php",
+      "bytes": 6684,
+      "elapsed_ms": 93,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-v2Q8rs9CXIWTV5fpFVMcpuRO5faYNOimt7Ri7vbi'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/composer.json",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/composer.json",
+      "bytes": 6684,
+      "elapsed_ms": 110,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-OtrQ1FKYsOs7y5a8mGNR85bil4lZY2SF0OtPlura'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/logs/laravel.log",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/storage/logs/laravel.log",
+      "bytes": 6684,
+      "elapsed_ms": 155,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-H8jF7UAVM7sjaFwGz0tQWRRcfzNQ6BCCLQBX3scG'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/.git/config",
+      "status": 403,
+      "url": "https://indonesiavanillas.com/.git/config",
+      "bytes": 1242,
+      "elapsed_ms": 62,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/probe.txt",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/storage/probe.txt",
+      "bytes": 6684,
+      "elapsed_ms": 103,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-VrTEdt6e2cw5EFOCEAfEKj89CCT4vMry1SsKTnTW'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/probe.php.jpg",
+      "status": 404,
+      "url": "https://indonesiavanillas.com/storage/probe.php.jpg",
+      "bytes": 6684,
+      "elapsed_ms": 135,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-c0QzOkEexGisk49lcXR2cc7UczKGbD8Oc6lNS6K5'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/storage/",
+      "status": 403,
+      "url": "https://indonesiavanillas.com/storage/",
+      "bytes": 1242,
+      "elapsed_ms": 41,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/php.ini",
+      "status": 403,
+      "url": "https://indonesiavanillas.com/php.ini",
+      "bytes": 1242,
+      "elapsed_ms": 563,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    },
+    {
+      "path": "/.user.ini",
+      "status": 403,
+      "url": "https://indonesiavanillas.com/.user.ini",
+      "bytes": 1242,
+      "elapsed_ms": 1067,
+      "headers": {
+        "Content-Type": "text/html",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": null,
+        "Referrer-Policy": null,
+        "Content-Security-Policy": null,
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "Permissions-Policy": null,
+        "X-Powered-By": null
+      },
+      "cookie_flags": []
+    }
+  ],
+  "redirects": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://indonesiavanillas.com/",
+      "bytes": 13718,
+      "elapsed_ms": 1407,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-Mc7VlZVfMqi9uCgFAKdJ3FCWTKaGgE3tnqlbsUA6'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://www.indonesiavanillas.com/",
+      "bytes": 13810,
+      "elapsed_ms": 256,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-KsZmXbqA91MpB3TxRbIYNgUQjAKKNJuGGAmuIi4f'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://www.indonesiavanillas.com/",
+      "bytes": 13810,
+      "elapsed_ms": 453,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'nonce-pzmVU02VyiKTRd3M9qvIjKx4WORlKMToh5deEMZL'; style-src 'self'; style-src-attr 'none'; img-src 'self' data: blob:; worker-src 'none'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'",
+        "Cache-Control": "no-cache, private",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "X-Powered-By": null
+      },
+      "cookie_flags": [
+        {
+          "name": "XSRF-TOKEN",
+          "secure": true,
+          "httponly": false,
+          "samesite": [
+            "lax"
+          ]
+        },
+        {
+          "name": "vanilindo-session",
+          "secure": true,
+          "httponly": true,
+          "samesite": [
+            "lax"
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "build/assets/app-BUUOQJZk.js",
+      "status": 200,
+      "bytes": 54544,
+      "sha256": "7c7ea49507bd57fc876178922f3ff72422a85a21aaf78790779312ca6f1b15ce",
+      "matches_release": true
+    },
+    {
+      "path": "build/assets/app-DSQHrc9j.css",
+      "status": 200,
+      "bytes": 61822,
+      "sha256": "3cbe9c27d0f5dbc24820062d815cc7f81c8592796fb4d6736d810c79939bddbd",
+      "matches_release": true
+    },
+    {
+      "path": "build/manifest.json",
+      "status": 200,
+      "bytes": 331,
+      "sha256": "aaa5ffa827fe3e50877123f9c67bf31ab67a55f21dfb55786ee9133ef11a5ef0",
+      "matches_release": true
+    },
+    {
+      "path": "css/filament/filament/app.css",
+      "status": 200,
+      "bytes": 630267,
+      "sha256": "74a8e7578a750fb46ea66deb969905e90a563f401935567b0902bfb032fc5d95",
+      "matches_release": true
+    },
+    {
+      "path": "favicon.ico",
+      "status": 200,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Catchy_Mager.woff2",
+      "status": 200,
+      "bytes": 38984,
+      "sha256": "c19e5fb00fe7a96a56552f9805e62bb472bc113c10880bc2dd181ad243d1931f",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Coco-Gothic-Bold.woff2",
+      "status": 200,
+      "bytes": 71776,
+      "sha256": "f3aeac9e6b5c90f2c169d719fd734793fb9ddbee5fa4cdfff68636c3fbaa652d",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Coco-Gothic-Regular.woff2",
+      "status": 200,
+      "bytes": 65272,
+      "sha256": "b88135d5c0a0bbb874b8063e559316b3bb214e2fad627d7e0e751caea3d3423a",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Glacial-Indifference-Regular.woff2",
+      "status": 200,
+      "bytes": 21748,
+      "sha256": "c0c2fd84942aefaaf2affc4c5eb363f57dd13e8cc85200ec44864aca2eb38d94",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Lora-BoldItalic.woff2",
+      "status": 200,
+      "bytes": 74084,
+      "sha256": "5c1080732baaf2d94851139e76a15f8eac4c63f70241b5da8463912cb7b67b60",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Lora.woff2",
+      "status": 200,
+      "bytes": 70168,
+      "sha256": "43acdabac4b6347654343b027491e6ee4c214a36e6eb4ffddfb3d7731d1d9bdc",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Poppins-Bold.woff2",
+      "status": 200,
+      "bytes": 62336,
+      "sha256": "04d75283d01cc3fb3bbf6dd86d0914c9ca2f4b09ef7a6cd0fd5612d72c876519",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/canva/Poppins-Regular.woff2",
+      "status": 200,
+      "bytes": 63168,
+      "sha256": "657618c51568c84f98c3f0c54c0bf0192f57e34ba174c13ba55238c4b473825c",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/index.css",
+      "status": 200,
+      "bytes": 2001,
+      "sha256": "a1844126529a6698ea00885e62f8e6a9f5402945cdf281adfe4f5a506ab2609d",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-cyrillic-ext-wght-normal-SP7Z6XGK.woff2",
+      "status": 200,
+      "bytes": 25668,
+      "sha256": "72ef5fb91eb7060a703770d85801c1686a21fa5a73b132923e05b59773e91a7c",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-cyrillic-wght-normal-DR6K5BQD.woff2",
+      "status": 200,
+      "bytes": 18860,
+      "sha256": "e3d19eea5d41f003696b212ec6721788c0993bc6be869a1a46a4b5fd81f10414",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-greek-ext-wght-normal-A2J6H3EX.woff2",
+      "status": 200,
+      "bytes": 11180,
+      "sha256": "607a497e27bba457cb7489593019b13e23228a73d4bbc4fc85d7ca3b48e8651e",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-greek-wght-normal-ZABHMKQG.woff2",
+      "status": 200,
+      "bytes": 18688,
+      "sha256": "59e001476c4a50e62474740c72beafcfdb4124c1d7d4b8b0d65942e7bda45d23",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-latin-ext-wght-normal-ZIT2UBIY.woff2",
+      "status": 200,
+      "bytes": 89876,
+      "sha256": "198833bad46168b8a48c453cf5a7ca11a6ccafd26d336eea35d8178f961cae53",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-latin-wght-normal-DIHYUR35.woff2",
+      "status": 200,
+      "bytes": 68332,
+      "sha256": "63a867b874311b9d2d7b392e61f398bd1373a8e1076a1abdae011e2f788bf2dc",
+      "matches_release": true
+    },
+    {
+      "path": "fonts/filament/filament/inter/inter-vietnamese-wght-normal-VWEHJHBA.woff2",
+      "status": 200,
+      "bytes": 11376,
+      "sha256": "55b684c729874120ce313190bbe520f5fb1bd9efb65fa39a9c45e682e560c351",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/about-background.png",
+      "status": 200,
+      "bytes": 2599947,
+      "sha256": "75fba27e872637ea32ad7c0ed2eb3651e21bae7aa06108fae2510906cd4d5fd2",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/anca-organics-hd.png",
+      "status": 200,
+      "bytes": 15549,
+      "sha256": "958c6c427cd59c610b0b98f396536c05a21b9d9b97928fcd6b5d0578d5651f41",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/anca-organics.png",
+      "status": 200,
+      "bytes": 12686,
+      "sha256": "ff260e55237052c68d5696527315b9cd776d9c5d9d7cd7fe90a8763703365bd5",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/blog-background.png",
+      "status": 200,
+      "bytes": 2699406,
+      "sha256": "9ef862e2de60c7db396ff0019c441e3674fbd6bb7cc7825bdd77f631a76c0abe",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/consistency-hd.png",
+      "status": 200,
+      "bytes": 7523,
+      "sha256": "3c567fef45536fbebbe490101357b2fe2dc44e31b99d036f2e5c846468596b3b",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/consistency.jpg",
+      "status": 200,
+      "bytes": 7886,
+      "sha256": "923394f08b32f8cda807b455d59859cfddf3b378543cb19d0539f8f31a21f986",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/footer-background.png",
+      "status": 200,
+      "bytes": 133551,
+      "sha256": "34cbcecdaba654399c873d7b763aff4779da9f44d04257a509b4b5503259d851",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/home-hero.png",
+      "status": 200,
+      "bytes": 2137846,
+      "sha256": "013d30d670c30715b93bf3bd9d4aebb8cc17db1738c25f55ac34f97047e8faa9",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/indonesia-map.png",
+      "status": 200,
+      "bytes": 66775,
+      "sha256": "ea83b753241e47c054eaca752aa9bc9a42387eb2b2097227ce1df4ac972c58e2",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/instagram.png",
+      "status": 200,
+      "bytes": 4716,
+      "sha256": "09dea5d01b1f5330d99677897b0e45c025db8289f201f31865a5dbfa914b1d16",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/papua-community.jpg",
+      "status": 200,
+      "bytes": 69845,
+      "sha256": "2b3be9c3430fafe0dc060255ccb6fcac6f89b36064ec5626e119947885417443",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/papua-ocean.jpg",
+      "status": 200,
+      "bytes": 144201,
+      "sha256": "0378819e3403fa24867ae83b567d59237c4c2d296722a017a2671c40e8ec0257",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/planifolia.jpg",
+      "status": 200,
+      "bytes": 8448,
+      "sha256": "98b5854dffb8ef3024e1584b4e0658e5d4e742e3f937b080ac279266df56df79",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/planifolia.png",
+      "status": 200,
+      "bytes": 124154,
+      "sha256": "913375a263d6c846648b333a42fded7aa233e0585bb103cc89687257e3e4655e",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/quality-background.png",
+      "status": 200,
+      "bytes": 3089390,
+      "sha256": "bf6458313e199fcf070bae6312e060dc2c5dc012a618c0e1557c1c7334d03d9f",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/quality-hd.png",
+      "status": 200,
+      "bytes": 8568,
+      "sha256": "a33d17799093d0b82dc65b40f3046254b1469428874066b24a78899d616510ea",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/quality-icon.png",
+      "status": 200,
+      "bytes": 20161,
+      "sha256": "a42fdc43d7c3de7952298a278f8f960be4c700ba8cce01acc664469e9edbff92",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/quality.jpg",
+      "status": 200,
+      "bytes": 7964,
+      "sha256": "b68a0d4bc1e3f25b364d85c0675eb25fe4a92b5e6547fbbeec7111b3849aab4a",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/tahitensis.jpg",
+      "status": 200,
+      "bytes": 15001,
+      "sha256": "8e9341645af093bb7ce006c08f696396971c2796757b378fa26cbe261077ceb9",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/tahitensis.png",
+      "status": 200,
+      "bytes": 174822,
+      "sha256": "578e40c4ee85964250b4a7745a708db1c3146bb9aa5e6eac54dbfcd667a1eb9d",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/transparency-hd.png",
+      "status": 200,
+      "bytes": 8347,
+      "sha256": "0c132636410a341e94891569cafb2afa4e50264c0a9b06abc0a7c6dcbd4cc6f3",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/transparency.jpg",
+      "status": 200,
+      "bytes": 8443,
+      "sha256": "1785bbbfcd23c123a3f7ecd18dfa804956c4dca16ef26effe8eb1452c94a6841",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/values-background.png",
+      "status": 200,
+      "bytes": 93629,
+      "sha256": "30379066d266ffaddb8ac46eb7bec3bf50110451567d5cfdef2bf0a85115c644",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/vanilindo-mark.png",
+      "status": 200,
+      "bytes": 3816,
+      "sha256": "0f085077627474abef222e4e30e06c2f4cc83db96fc31fb9eaabbbf4bfac4ed5",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/vanilla-background.png",
+      "status": 200,
+      "bytes": 982017,
+      "sha256": "770bdde06ff5c86deed748b7720527e5e999a8ade5d9603c43923b50215620d5",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/vanilla-bowl.jpg",
+      "status": 200,
+      "bytes": 20603,
+      "sha256": "a5e25317aec2a94ace93fb8ebd7bbd4bbdbfd412a8287aaec6d3bf19fb13bf76",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/vanilla-bowl.png",
+      "status": 200,
+      "bytes": 323717,
+      "sha256": "b9010b37d8c7902792949cfad5cad747647057873cabfcf02b35d0550ee448f8",
+      "matches_release": true
+    },
+    {
+      "path": "images/canva/whatsapp.png",
+      "status": 200,
+      "bytes": 4694,
+      "sha256": "a3bb18fdf4e04b878c2ca75e2dd7079f65b70cc267d7caf80fff36c0e12813b6",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/actions/actions.js",
+      "status": 200,
+      "bytes": 3288,
+      "sha256": "1af35be6c78304867afed82765ff7b0b7cedac25f91c5c71375574696571eda4",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/filament/app.js",
+      "status": 200,
+      "bytes": 11781,
+      "sha256": "774df019e62b96c8f22e3628fcca0ce0a09f0b81eb11070baac9dc725c0524e2",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/filament/echo.js",
+      "status": 200,
+      "bytes": 91939,
+      "sha256": "febc1fedb869be7e37150dbf2fe862b4a150e5fbc62c1ca23d5cd9be9635c059",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/checkbox-list.js",
+      "status": 200,
+      "bytes": 1754,
+      "sha256": "4e7a42f1fe085a925838b800eba6803a0c1edb72d24dfc7b254a16608450eb67",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/code-editor.js",
+      "status": 200,
+      "bytes": 985486,
+      "sha256": "5e937ed1f418e8ea29a66dd82dfa1720536fe030d95e3c9fd004ea5058ef9598",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/color-picker.js",
+      "status": 200,
+      "bytes": 9996,
+      "sha256": "6f6e75db259ade9306f422c0c77df06674ba059aa00e069305df494eb31448f7",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/date-time-picker.js",
+      "status": 200,
+      "bytes": 125143,
+      "sha256": "76ac9a4b201d1c600680496c99ac6c123aa7e5688c083cb3533721a912a20ecd",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/file-upload.js",
+      "status": 200,
+      "bytes": 374331,
+      "sha256": "21903ccde5003f085a693148abd1080be41503a466727e87ab5ccc2ab35fbb3f",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/key-value.js",
+      "status": 200,
+      "bytes": 1023,
+      "sha256": "6c7b7f7fb9da0f8f30b07c2aca89b7d3b5b8ecefcec30fac39c7ecb2382aff0d",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/markdown-editor.js",
+      "status": 200,
+      "bytes": 523540,
+      "sha256": "c4e88735319ea207534c93d1afaa83111fe7214b5e177af4c4bd29dda7239313",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/rich-editor.js",
+      "status": 200,
+      "bytes": 541252,
+      "sha256": "54c1696d54abd5c4af67a7d8962d518f31f2eb4a93ef8709c405a499b22424e7",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/select.js",
+      "status": 200,
+      "bytes": 87055,
+      "sha256": "c06f19c02262cca282363ea61175389c81e4e4850280b10f071fc33f5fc43644",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/slider.js",
+      "status": 200,
+      "bytes": 29055,
+      "sha256": "b6cc01a2b5eff71162f2e10b471dfe971b5746dcd3e7b06ef0513d3b50f611c1",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/tags-input.js",
+      "status": 200,
+      "bytes": 1210,
+      "sha256": "63af88c5a45a83658ec5047941d74c959118b1a8495e69248da9fe2eb7410074",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/forms/components/textarea.js",
+      "status": 200,
+      "bytes": 874,
+      "sha256": "7cc3e9c69bec6c491977699c825c6cd14cf9a0926916fb7e258469b9705b9572",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/notifications/notifications.js",
+      "status": 200,
+      "bytes": 6330,
+      "sha256": "6e498687932edc82c1fd5b81cc877607d8afdb1ae31ac92d057ee65c3254f0e9",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/schemas/components/actions.js",
+      "status": 200,
+      "bytes": 876,
+      "sha256": "bf492e090d800749691cca4b5df3424a144ea48b784f50ce2acb355f8dbf5e91",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/schemas/components/tabs.js",
+      "status": 200,
+      "bytes": 4075,
+      "sha256": "690061382f38cd7d9fdc09950e230226ac18c4ab10e2b3195f96f01b87b24fe0",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/schemas/components/wizard.js",
+      "status": 200,
+      "bytes": 2134,
+      "sha256": "db711f32898b0a44cdfaed2481024d7dedac5d340f2c16829d8d97d16033398a",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/schemas/schemas.js",
+      "status": 200,
+      "bytes": 3774,
+      "sha256": "14c027cb8ff8046ae1004f41dc2af1a7504ce46798bb6bb78baa63443bbadefb",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/support/support.js",
+      "status": 200,
+      "bytes": 145512,
+      "sha256": "ae6e0fcee8663bcfe5a2ec00e5d91996bc220605ffa7ee4fb7a6c297b74aeec5",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/tables/components/columns/checkbox.js",
+      "status": 200,
+      "bytes": 910,
+      "sha256": "cc10e272018ec23c0e6929d9142a12535877dbb8f854fb78e89f2a0d474c85a5",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/tables/components/columns/select.js",
+      "status": 200,
+      "bytes": 87666,
+      "sha256": "c0386fec11568884edd9dc71686f2406dc14c89351bbcfc531d9cfe10c6a7498",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/tables/components/columns/text-input.js",
+      "status": 200,
+      "bytes": 1071,
+      "sha256": "5646d0f4389624665b40607fe9f64e2f7366e8918d78edbc38de34ec24309453",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/tables/components/columns/toggle.js",
+      "status": 200,
+      "bytes": 910,
+      "sha256": "cc10e272018ec23c0e6929d9142a12535877dbb8f854fb78e89f2a0d474c85a5",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/tables/tables.js",
+      "status": 200,
+      "bytes": 22989,
+      "sha256": "ba38ba80e0a120528f95798744cf6863726fed22a8b41e84ef328d727c935d17",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/widgets/components/chart.js",
+      "status": 200,
+      "bytes": 286206,
+      "sha256": "05e6cf4655f5d5e8db40d8bd316fe3ba45cc6b6d0e3a45c65311d74d345c4ee2",
+      "matches_release": true
+    },
+    {
+      "path": "js/filament/widgets/components/stats-overview/stat/chart.js",
+      "status": 200,
+      "bytes": 148657,
+      "sha256": "ece68e1e30812b78cef9dcaa0e8dc7318b92798f05345ccdfbf1e67e12d2a957",
+      "matches_release": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "bytes": 24,
+      "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f",
+      "matches_release": true
+    }
+  ],
+  "assets_all_match": true,
+  "checks": {
+    "pages_accessible": true,
+    "private_paths_blocked": true,
+    "assets_match_release": true,
+    "http_redirects_to_https": true,
+    "secure_session_cookies": true,
+    "public_csp_disallows_eval": true,
+    "admin_responses_not_cached": true,
+    "php_version_header_hidden": true
+  },
+  "passed": true
+}
