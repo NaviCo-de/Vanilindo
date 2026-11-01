@@ -89,12 +89,15 @@ class FTPS:
 
     def entries(self, path: str) -> dict[str, str]:
         result = {}
-        for name, facts in self.ftp.mlsd(path):
-            if name in (".", "..") or facts.get("type") in ("cdir", "pdir"):
-                continue
-            if "/" in safe_path(name):
-                raise DeploymentError("Invalid server directory entry")
-            result[name] = facts.get("type", "unknown")
+        try:
+            for name, facts in self.ftp.mlsd(path):
+                if name in (".", "..") or facts.get("type") in ("cdir", "pdir"):
+                    continue
+                if "/" in safe_path(name):
+                    raise DeploymentError("Invalid server directory entry")
+                result[name] = facts.get("type", "unknown")
+        except TimeoutError:
+            raise DeploymentError("FTPS directory listing timed out after encrypted login; check the hosting passive FTP data ports/firewall.") from None
         return result
 
     def kind(self, path: str):
@@ -424,6 +427,7 @@ def main() -> int:
         if not all(os.environ.get(key) for key in required):
             raise DeploymentError("Set CPANEL_FTPS_HOST, CPANEL_FTPS_USER and CPANEL_FTPS_PASSWORD as environment secrets")
         remote = FTPS(*(os.environ[key] for key in required), port=int(os.environ.get("CPANEL_FTPS_PORT", "21")))
+        print("FTPS encrypted login succeeded; checking the hosting filesystem.", flush=True)
         deploy(remote, bundle, args.base, os.environ.get("CPANEL_FTP_ROOT", "/"))
         return 0
     except (Exception, KeyboardInterrupt) as error:

@@ -463,6 +463,16 @@ class ProtocolTests(unittest.TestCase):
         tls.return_value.close.assert_called_once()
 
     @patch("deploy.ftplib.FTP_TLS")
+    def test_listing_timeout_reports_data_channel_without_server_details(self, client):
+        remote = FTPS("ftp.example.test", "test-user", "test-password")
+        client.return_value.mlsd.side_effect = TimeoutError("sensitive server response")
+        with self.assertRaisesRegex(DeploymentError, "passive FTP data ports") as raised:
+            remote.entries("/")
+        self.assertNotIn("sensitive", str(raised.exception))
+        client.return_value.mkd.assert_not_called()
+        client.return_value.storbinary.assert_not_called()
+
+    @patch("deploy.ftplib.FTP_TLS")
     def test_truncated_transfer_is_rejected(self, client):
         remote = FTPS("ftp.example.test", "test-user", "test-password")
         client.return_value.size.return_value = 2
