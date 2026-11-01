@@ -2,7 +2,7 @@
 
 Workflow berada di `.github/workflows/cpanel-cd.yml`. Deployment diaktifkan lewat repository variable `CPANEL_CD_ENABLED` setelah credential dan kemampuan FTPS hosting diverifikasi. Perubahan CD tidak mengubah source desain; pembaruan blog dan widget WhatsApp mengikuti `main` terbaru.
 
-Verifikasi lokal 1 November 2026 setelah sinkronisasi `main` (`2344ab1`): 40 tes aplikasi / 294 assertion dan 29 tes CD lulus; audit Composer/npm bersih; workflow lolos actionlint 1.7.12. Paket produksi berisi 14.384 file tanpa vendor development. Rehearsal nyata berhasil membuka `/up`, `/`, `/admin/login`, memeriksa 79 aset, serta memastikan SQLite dan runtime menggunakan folder bersama. Ini belum merupakan hasil eksekusi GitHub Actions atau deployment FTPS ke KunciHost.
+Verifikasi lokal 1 November 2026 setelah sinkronisasi `main` (`2344ab1`): 40 tes aplikasi / 294 assertion dan 31 tes CD lulus; audit Composer/npm bersih; workflow lolos actionlint 1.7.12. Paket produksi berisi 14.384 file tanpa vendor development. Rehearsal nyata berhasil membuka `/up`, `/`, `/admin/login`, memeriksa 79 aset, serta memastikan SQLite dan runtime menggunakan folder bersama. Ini belum merupakan hasil eksekusi GitHub Actions atau deployment FTPS ke KunciHost.
 
 ## Alur setelah diaktifkan nanti
 
@@ -17,7 +17,7 @@ Deployment memakai explicit FTPS dengan pemeriksaan sertifikat dan enkripsi kone
 3. Upload dependency dan source produksi ke direktori release privat yang baru. Website lama tetap melayani pengunjung selama tahap ini.
 4. Simpan backup file publik yang akan diganti ke direktori privat. Aktifkan maintenance singkat, pasang aset, lalu ganti `public_html/index.php` terakhir.
 5. Periksa HTTPS `/up`, halaman utama, login admin, identitas release, hash aset publik, serta penolakan akses file privat. Ada retry terbatas untuk keterlambatan OPcache.
-6. Bila pemeriksaan gagal, coba pulihkan file dan index sebelumnya. Keberhasilan menyimpan state baru; dua release terkelola terbaru dipertahankan.
+6. Bila pemeriksaan gagal, coba pulihkan file dan index sebelumnya. Keberhasilan menyimpan state baru; dua release terkelola terbaru dipertahankan. Sebelum upload berikutnya, CD membersihkan release paling lama yang tidak aktif, agar tidak menumpuk tiga vendor sekaligus pada kuota 500 MB. Source aktif selalu dipertahankan selama aktivasi/rollback; source manual lama di luar `.cd` tidak dihapus.
 
 `.env`, APP_KEY, database, akun admin, sesi, log, dan foto upload yang sudah ada tidak diganti. CD hanya mengelola `storage/.htaccess` pada direktori media. Aset lama di luar paket tidak dihapus, agar pengunjung yang masih membuka halaman lama tidak kehilangan aset.
 
@@ -47,7 +47,7 @@ Jika FTP memperlihatkan filesystem absolut, root biasanya `/home/indone57`; veri
 
 GitHub otomatis membuat environment `production` ketika job deployment pertama berjalan. Mengatur proteksi environment melalui API memerlukan akses admin; akun CLI saat persiapan ini hanya mempunyai akses write. Admin repository dapat menambahkan pembatasan branch environment ke `main` dan aturan review yang sesuai. Workflow sendiri tetap membatasi deployment ke `main`. Pin action memakai commit SHA dan permission token hanya `contents: read`. Cek kuota menit/storage GitHub Actions sebelum aktivasi; konfigurasi CD ini tidak mengubah paket atau billing apa pun.
 
-Pastikan backup penuh cPanel/database tersedia, kapasitas disk cukup untuk source lama ditambah release aktif, release sebelumnya, release staging, dan backup publik. Vendor berisi ribuan file: upload FTPS bisa beberapa menit. Upload privat memakai maksimum tiga koneksi paralel. Durasi maintenance hanya tahap aktivasi aset publik, bukan seluruh upload vendor; ini bukan jaminan zero downtime.
+Pastikan backup penuh cPanel/database tersedia dan kapasitas disk cukup untuk source manual lama, release aktif, release staging, serta backup publik. Release sebelumnya yang sudah tidak aktif dibersihkan sebelum staging berikutnya. cPanel saat persiapan 1 November 2026 mencatat sekitar 184 dari 500 MB terpakai; vendor baru sekitar 57 MiB payload dan sekitar 97 MiB alokasi lokal. Vendor berisi ribuan file: upload FTPS bisa beberapa menit. Upload privat memakai tiga koneksi worker dan satu koneksi kontrol. Durasi maintenance hanya tahap aktivasi aset publik, bukan seluruh upload vendor; ini bukan jaminan zero downtime.
 
 Jalankan build saja terlebih dahulu dengan `CPANEL_CD_ENABLED` tetap nonaktif. Setelah hasil hijau dan kemampuan FTPS sudah diverifikasi, aktifkan variable lalu jalankan workflow dari `main`. Verifikasi login, CRUD, dan upload admin pada deployment pertama. Kredensial admin yang sudah ada tetap digunakan.
 

@@ -37,6 +37,8 @@ jobs:
           composer validate --strict
           composer install --prefer-dist --no-interaction
           npm ci
+      - name: Prepare synthetic environment for application tests
+        run: cp .env.example .env
       - name: Security audits
         run: |
           composer audit --locked
@@ -53,7 +55,7 @@ jobs:
           CACHE_STORE: array
           SESSION_DRIVER: array
         run: |
-          php artisan test
+          php artisan test --fail-on-warning --display-warnings
           python3 -m unittest discover -s tests/deployment -v
       - name: Build isolated production dependencies and release
         env:

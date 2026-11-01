@@ -290,6 +290,8 @@ def deploy(remote, bundle: Bundle, base: str, root: str = "/", health=health_che
                     or not state["history"] or state["release_id"] != state["history"][0]
                     or not all(RELEASE_ID.fullmatch(item) for item in state["history"])):
                 raise DeploymentError("Invalid existing CD state; manual inspection is required")
+            if remote.read(public + "/index.php") != front_controller(state["release_id"]).encode():
+                raise DeploymentError("Active front controller does not match CD state; inspect manual changes first")
             previous_migrations = state["migration_hash"]
         else:
             folder = app + "/database/migrations"
@@ -305,6 +307,13 @@ def deploy(remote, bundle: Bundle, base: str, root: str = "/", health=health_che
         remote.ensure_dir(str(PurePosixPath(backup).parent))
         if remote.kind(release) or remote.kind(backup):
             raise DeploymentError("Release ID already exists; use a new workflow run attempt")
+        # On the 500 MB plan, staging a third unpacked release can exceed quota.
+        # Drop only known inactive history; keep the live release for rollback.
+        if state:
+            for old in set(state["history"][1:]) - {state["release_id"]}:
+                for directory in (control + "/releases/" + old, control + "/backups/" + old):
+                    if remote.kind(directory) == "dir":
+                        remote.remove_release_tree(directory)
         remote.mkdir(release)
         stage_created = True
         remote.mkdir(backup)

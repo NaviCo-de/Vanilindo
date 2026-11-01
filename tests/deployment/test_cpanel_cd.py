@@ -283,6 +283,30 @@ class TransactionTests(unittest.TestCase):
         self.assertIn("/vanilindo/.cd/releases/" + THIRD, self.remote.dirs)
         self.assert_persistent_data_unchanged()
 
+    def test_older_inactive_release_is_pruned_before_staging_to_bound_disk_usage(self):
+        deploy(self.remote, self.bundle, "https://example.test", health=lambda *a: None)
+        second = make_bundle(self.root / "second", SECOND)
+        deploy(self.remote, second, "https://example.test", health=lambda *a: None)
+        third = make_bundle(self.root / "third", THIRD)
+        def check_upload(operation, path, data):
+            if operation == "put" and "/releases/" + THIRD + "/" in path:
+                self.assertNotIn("/vanilindo/.cd/releases/" + FIRST, self.remote.dirs)
+                self.assertIn("/vanilindo/.cd/releases/" + SECOND, self.remote.dirs)
+                self.assertEqual(front_controller(SECOND).encode(), self.remote.files["/public_html/index.php"])
+        self.remote.failure = check_upload
+        deploy(self.remote, third, "https://example.test", health=lambda *a: None)
+        self.assert_persistent_data_unchanged()
+
+    def test_manual_index_change_stops_before_pruning_any_previous_release(self):
+        deploy(self.remote, self.bundle, "https://example.test", health=lambda *a: None)
+        second = make_bundle(self.root / "second", SECOND)
+        deploy(self.remote, second, "https://example.test", health=lambda *a: None)
+        self.remote.files["/public_html/index.php"] = b"manually changed controller"
+        with self.assertRaisesRegex(DeploymentError, "does not match CD state"):
+            deploy(self.remote, make_bundle(self.root / "third", THIRD), "https://example.test", health=lambda *a: None)
+        self.assertIn("/vanilindo/.cd/releases/" + FIRST, self.remote.dirs)
+        self.assertIn("/vanilindo/.cd/releases/" + SECOND, self.remote.dirs)
+
     def test_missing_env_stops_before_any_deploy_writes(self):
         del self.remote.files["/vanilindo/.env"]
         operations = list(self.remote.operations)
