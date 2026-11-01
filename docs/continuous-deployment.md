@@ -2,7 +2,9 @@
 
 Workflow berada di `.github/workflows/cpanel-cd.yml`. Deployment diaktifkan lewat repository variable `CPANEL_CD_ENABLED` setelah credential dan kemampuan FTPS hosting diverifikasi. Perubahan CD tidak mengubah source desain; pembaruan blog dan widget WhatsApp mengikuti `main` terbaru.
 
-Verifikasi lokal 1 November 2026 setelah sinkronisasi `main` (`2344ab1`): 40 tes aplikasi / 294 assertion dan 31 tes CD lulus; audit Composer/npm bersih; workflow lolos actionlint 1.7.12. Paket produksi berisi 14.384 file tanpa vendor development. Rehearsal nyata berhasil membuka `/up`, `/`, `/admin/login`, memeriksa 79 aset, serta memastikan SQLite dan runtime menggunakan folder bersama. Ini belum merupakan hasil eksekusi GitHub Actions atau deployment FTPS ke KunciHost.
+Status 1 November 2026: perubahan CD sudah di `main`, dan tiga secret FTPS tersimpan di GitHub Actions. [Run `41320047942`](https://github.com/NaviCo-de/Vanilindo/actions/runs/41320047942) meluluskan audit dependency, build, 40 tes aplikasi / 294 assertion tanpa warning, 32 tes CD, serta rehearsal paket produksi 14.384 file dan 79 aset. **Deployment produksi belum berhasil:** login FTPS terenkripsi dari runner GitHub berhasil, kemudian directory listing pertama timeout pada koneksi data sebelum ada perubahan hosting. `CPANEL_CD_ENABLED` dikembalikan ke `false` sambil menunggu perbaikan jalur passive FTP.
+
+Pengujian Mac juga berhasil login, tetapi TCP connect ke port PASV/EPSV yang diiklankan server timeout. Ini mengarah ke konfigurasi passive FTP/firewall hosting; perlu konfirmasi KunciHost, sesuai [panduan diagnosis cPanel](https://support.cpanel.net/hc/en-us/articles/360050812133-FTP-fails-with-timeout-error-when-entering-passive-mode-due-to-closed-ports). Draft tiket teknis disimpan lokal dan belum dikirim. HTTPS `/up`, `/`, dan `/admin/login` masih memberi HTTP 200; website masih memakai deployment sebelumnya dan belum memiliki header release CD. Jangan menganggap paket terbaru sudah terpasang hanya karena build hijau.
 
 ## Alur setelah diaktifkan nanti
 
@@ -21,9 +23,9 @@ Deployment memakai explicit FTPS dengan pemeriksaan sertifikat dan enkripsi kone
 
 `.env`, APP_KEY, database, akun admin, sesi, log, dan foto upload yang sudah ada tidak diganti. CD hanya mengelola `storage/.htaccess` pada direktori media. Aset lama di luar paket tidak dihapus, agar pengunjung yang masih membuka halaman lama tidak kehilangan aset.
 
-## Persiapan aktivasi, dilakukan nanti
+## Persiapan dan hambatan aktivasi
 
-**Dukungan FTPS KunciHost belum diuji langsung.** Sebelum mengaktifkan CD, pastikan akun FTPS yang dipakai dapat melihat **kedua folder sejajar** `vanilindo` dan `public_html`, mempunyai izin tulis pada keduanya, dan mendukung MLSD, SITE CHMOD, serta rename lintas direktori secara atomik dengan penggantian file tujuan. Akun yang dibatasi hanya ke `public_html` tidak cukup. Pastikan passive TLS data transfer bekerja dengan client Python ini; jangan menonaktifkan verifikasi sertifikat jika ada masalah.
+**Login FTPS sudah teruji; transfer data masih timeout.** Akun FTP sudah dibuat dengan direktori `/home/indone57`, tetapi listing/transfer belum berhasil. Setelah masalah passive FTP selesai, pastikan akun dapat melihat **kedua folder sejajar** `vanilindo` dan `public_html`, mempunyai izin tulis pada keduanya, dan mendukung MLSD, SITE CHMOD, serta rename lintas direktori secara atomik dengan penggantian file tujuan. Akun yang dibatasi hanya ke `public_html` tidak cukup. Pastikan passive TLS data transfer bekerja dengan client Python ini; jangan menonaktifkan verifikasi sertifikat jika ada masalah.
 
 Nama host harus sesuai sertifikat TLS server FTP, biasanya hostname server dari cPanel → FTP Accounts → Configure FTP Client; jangan mengasumsikan nama domain website juga benar untuk FTPS. FTPS explicit biasanya memakai port 21, berbeda dari SFTP/SSH.
 
