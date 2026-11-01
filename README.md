@@ -30,4 +30,4 @@ Buka `http://127.0.0.1:8000` untuk website dan `http://127.0.0.1:8000/admin` unt
 
 Konten halaman publik menggunakan bahasa Inggris. Aset foto asli belum tersedia; area gambar dan teks yang belum final diberi penanda `[Temporary]`. Detail kontak yang terlihat di Canva telah dikonfirmasi untuk digunakan dan tetap dapat diedit dari admin.
 
-Panduan: [admin](docs/admin-guide.md), [cek deployment cPanel](docs/deployment-checklist.md), dan [rencana implementasi](docs/implementation-plan.md).
+Panduan: [admin](docs/admin-guide.md), [cek deployment cPanel](docs/deployment-checklist.md), [CD cPanel](docs/continuous-deployment.md), dan [rencana implementasi](docs/implementation-plan.md).
