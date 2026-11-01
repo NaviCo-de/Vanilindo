@@ -10,11 +10,12 @@
                 <div class="blog-track" id="blog-slides" data-blog-track tabindex="0" aria-label="Blog posts. Use the left and right arrow keys to browse.">
                     @foreach($articles as $article)
                         <article class="blog-slide" data-blog-slide role="group" aria-roledescription="slide" aria-label="{{ $loop->iteration }} of {{ $loop->count }}">
-                            <a class="blog-card" href="{{ $article->externalLink() ?: route('blog.show', $article) }}" @if($article->externalLink()) rel="external noopener noreferrer" @endif>
+                            <a class="blog-card" href="{{ route('blog.show', $article) }}">
                                 <x-media-panel :path="$article->cover_image_path" fallback="images/canva/blog-background.png" :alt="$article->cover_image_alt ?: $article->title" />
                                 <div class="blog-card-copy">
                                     <h3>{{ $article->title }}</h3>
-                                    <p>{{ $article->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($article->body ?: ''), 180) }}</p>
+                                    <p>{{ $article->summary() }}</p>
+                                    <span class="blog-read-more">Read story <span aria-hidden="true">↗</span></span>
                                 </div>
                             </a>
                         </article>

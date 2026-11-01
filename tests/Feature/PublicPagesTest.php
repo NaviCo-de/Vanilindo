@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Article;
 use App\Models\Product;
+use App\Models\SiteSetting;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -110,19 +111,21 @@ class PublicPagesTest extends TestCase
             ->assertSee(route('home', ['blog_page' => 2, 'products_page' => 2]) . '#products');
     }
 
-    public function test_blog_cards_link_directly_to_external_urls_and_old_article_urls_redirect(): void
+    public function test_all_blog_cards_open_internal_articles_even_with_a_legacy_external_url(): void
     {
         $article = Article::create([
             'title' => 'Vanilla Export News', 'excerpt' => 'The latest from our vanilla farmers.',
             'external_url' => 'https://example.com/vanilla?source=blog&campaign=harvest',
+            'body' => 'The complete story of our vanilla harvest.',
             'is_published' => true,
         ]);
 
         $this->get('/')->assertOk()->assertSee('Vanilla Export News')
             ->assertSee('The latest from our vanilla farmers.')
-            ->assertSee('href="https://example.com/vanilla?source=blog&amp;campaign=harvest"', false)
-            ->assertDontSee('href="' . route('blog.show', $article) . '"', false);
-        $this->get(route('blog.show', $article))->assertRedirect($article->external_url);
+            ->assertDontSee('href="https://example.com/vanilla', false)
+            ->assertSee('href="' . route('blog.show', $article) . '"', false);
+        $this->get(route('blog.show', $article))->assertOk()->assertSee('The complete story of our vanilla harvest.')
+            ->assertSee('Back to all stories')->assertDontSee('min read');
 
         $article->update(['is_published' => false]);
         $this->get(route('blog.show', $article))->assertNotFound();
@@ -139,5 +142,30 @@ class PublicPagesTest extends TestCase
 
         $this->get('/')->assertOk()->assertDontSee('href="javascript:', false);
         $this->get(route('blog.show', $article))->assertOk()->assertSee('A legacy article.');
+    }
+
+    public function test_a_legacy_story_without_body_still_displays_its_summary(): void
+    {
+        $article = Article::create(['title' => 'Legacy story', 'excerpt' => 'Original summary to preserve.', 'is_published' => true]);
+        $this->get(route('blog.show', $article))->assertOk()->assertSee('Original summary to preserve.');
+    }
+
+    public function test_whatsapp_contacts_use_current_site_settings_on_home_and_article_pages(): void
+    {
+        $article = Article::create(['title' => 'Contact story', 'body' => 'A story.', 'is_published' => true]);
+        SiteSetting::first()->update(['whatsapp_number' => '+62 811-8492-208', 'secondary_whatsapp_number' => '+62 811-9980-980']);
+
+        foreach (['/', route('blog.show', $article)] as $url) {
+            $this->get($url)->assertOk()->assertSee('data-whatsapp-widget', false)
+                ->assertSee('Contact Person 1')->assertSee('Contact Person 2')
+                ->assertSee('href="https://wa.me/628118492208"', false)
+                ->assertSee('href="https://wa.me/628119980980"', false);
+        }
+
+        SiteSetting::first()->update(['whatsapp_number' => '+62 812-3456-7890', 'secondary_whatsapp_number' => null]);
+        $this->get('/')->assertOk()->assertSee('Contact Person 1')->assertDontSee('Contact Person 2')
+            ->assertSee('https://wa.me/6281234567890');
+        SiteSetting::first()->update(['whatsapp_number' => null]);
+        $this->get('/')->assertOk()->assertDontSee('data-whatsapp-widget', false);
     }
 }

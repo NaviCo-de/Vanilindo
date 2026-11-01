@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" @class(['article-layout' => $articleOnly ?? false])>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +15,14 @@
         @hasSection('page_label')
             <div class="page-label">@yield('page_label')</div>
         @endif
-        <x-site-header :settings="$settings" />
+        @unless($articleOnly ?? false)
+            <x-site-header :settings="$settings" />
+        @endunless
         <main id="main">@yield('content')</main>
-        <x-site-footer :settings="$settings" />
+        @unless($articleOnly ?? false)
+            <x-site-footer :settings="$settings" />
+        @endunless
     </div>
+    <x-whatsapp-widget :settings="$settings" />
 </body>
 </html>

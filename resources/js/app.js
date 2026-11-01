@@ -1,5 +1,30 @@
 import './bootstrap';
 
+document.querySelectorAll('[data-whatsapp-widget]').forEach((widget) => {
+    const toggle = widget.querySelector('[data-whatsapp-toggle]');
+    const panel = widget.querySelector('[data-whatsapp-panel]');
+    const close = widget.querySelector('[data-whatsapp-close]');
+    if (!toggle || !panel || !close) return;
+
+    const setOpen = (open, restoreFocus = false) => {
+        panel.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close WhatsApp contacts' : 'Open WhatsApp contacts');
+        if (open) panel.querySelector('a')?.focus({ preventScroll: true });
+        else if (restoreFocus) toggle.focus({ preventScroll: true });
+    };
+
+    toggle.addEventListener('click', () => setOpen(panel.hidden));
+    close.addEventListener('click', () => setOpen(false, true));
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !panel.hidden) setOpen(false, true);
+    });
+    document.addEventListener('pointerdown', (event) => {
+        if (!panel.hidden && !widget.contains(event.target)) setOpen(false);
+    });
+    widget.hidden = false;
+});
+
 document.querySelectorAll('[data-blog-carousel]').forEach((carousel) => {
     const track = carousel.querySelector('[data-blog-track]');
     const slides = [...carousel.querySelectorAll('[data-blog-slide]')];

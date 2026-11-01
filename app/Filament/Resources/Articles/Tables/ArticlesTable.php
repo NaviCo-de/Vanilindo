@@ -17,7 +17,7 @@ class ArticlesTable
             ->columns([
                 ImageColumn::make('cover_image_path')->label('Gambar')->disk('public')->imageWidth(100)->imageHeight(56),
                 TextColumn::make('title')->label('Judul')->searchable()->sortable()->wrap(),
-                TextColumn::make('external_url')->label('Link blog')->limit(45)->wrap(),
+                TextColumn::make('excerpt')->label('Ringkasan')->limit(90)->wrap(),
                 IconColumn::make('is_published')->label('Tampil')->boolean(),
                 TextColumn::make('published_at')->label('Jadwal tayang')->dateTime()->timezone('Asia/Jakarta')->sortable()->placeholder('Langsung'),
                 TextColumn::make('updated_at')->label('Diubah')->dateTime()->timezone('Asia/Jakarta')->sortable(),

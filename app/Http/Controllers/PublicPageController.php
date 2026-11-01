@@ -29,8 +29,7 @@ class PublicPageController extends Controller
                 ->orderByDesc('is_featured')->orderBy('sort_order')->limit(2)->get(),
             'products' => Product::where('is_published', true)->orderBy('sort_order')
                 ->paginate(9, ['*'], 'products_page')->withQueryString()->fragment('products'),
-            'articles' => Article::where('is_published', true)
-                ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
+            'articles' => Article::published()
                 ->orderByRaw('COALESCE(published_at, created_at) DESC')->orderByDesc('id')->get(),
         ]);
     }
@@ -59,18 +58,14 @@ class PublicPageController extends Controller
         return redirect()->to(route('home') . '#blog');
     }
 
-    public function article(Article $article): View|RedirectResponse
+    public function article(Article $article): View
     {
-        abort_unless($article->is_published && (! $article->published_at || $article->published_at->isPast()), 404);
-
-        if ($url = $article->externalLink()) {
-            return redirect()->away($url);
-        }
+        abort_unless($article->is_published && (! $article->published_at || $article->published_at->lessThanOrEqualTo(now())), 404);
 
         return view('pages.article', [
             ...$this->shared(),
             'article' => $article,
-            'articleHtml' => Str::markdown($article->body, [
+            'articleHtml' => Str::markdown((string) $article->body, [
                 'html_input' => 'strip',
                 'allow_unsafe_links' => false,
             ]),

@@ -41,5 +41,11 @@ detail pages remain available; their navigation returns to the matching section.
 The product catalog keeps its own pagination and section anchor. Blog posts use
 a horizontal, swipeable carousel with a centered image/title/description card
 and triangular previous/next controls, matching the Canva blog layout. Published
-posts open their administrator-provided HTTP(S) links directly; legacy articles
-without external links retain their detail pages.
+posts open internal journal pages. Card title sizes are reduced and summaries
+show up to four lines on desktop and five on mobile. Journal pages use the same
+local typefaces with a cream background, brown text, and subtle botanical
+accents. Titles use the full content width, with the summary and photo below.
+A sticky brown bar contains the single back link. The decorative botanical
+line art is in public/images/journal-botanical.svg. Article summaries and body
+paragraphs are justified. A fixed WhatsApp contact
+panel on public pages uses the two phone numbers from Site Settings.

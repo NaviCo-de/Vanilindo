@@ -1,9 +1,40 @@
-@extends('layouts.public')
+@extends('layouts.public', ['articleOnly' => true])
 
 @section('title', $article->seo_title ?: $article->title)
-@section('meta_description', $article->seo_description ?: $article->excerpt ?: 'Vanilindo stories and insights about Indonesian vanilla.')
+@section('meta_description', $article->seo_description ?: $article->summary() ?: 'Vanilindo stories and insights about Indonesian vanilla.')
 
 @section('content')
-    <div class="page-label"><div class="shell"><a href="{{ route('home') }}#blog">Blog</a> <span aria-hidden="true">/</span> Article</div></div>
-    <article class="article-page"><header class="shell narrow centered"><p class="eyebrow">{{ $article->published_at?->format('d F Y') ?: 'Vanilindo Journal' }}</p><h1 class="display-title">{{ $article->title }}</h1>@if($article->excerpt)<p class="section-lead">{{ $article->excerpt }}</p>@endif</header>@if($article->cover_image_path)<div class="shell article-cover"><x-media-panel :path="$article->cover_image_path" :alt="$article->cover_image_alt ?: $article->title" /></div>@endif<div class="shell article-body prose">{!! $articleHtml !!}</div><div class="shell narrow"><a class="text-link" href="{{ route('home') }}#blog">← Back to all stories</a></div></article>
+    <nav class="journal-backbar" aria-label="Article navigation">
+        <div class="journal-shell">
+            <a class="journal-back" href="{{ route('home') }}#blog">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m10 5-7 7 7 7M3 12h18" /></svg>
+                <span>Back to all stories</span>
+            </a>
+        </div>
+    </nav>
+    <article class="journal-page">
+        <header class="journal-hero">
+            <div class="journal-shell">
+                <div class="journal-title"><h1>{{ $article->title }}</h1></div>
+                <div class="journal-heading-grid">
+                    <div class="journal-intro">
+                        @if($article->excerpt)<p class="journal-summary">{{ $article->excerpt }}</p>@endif
+                        <div class="journal-meta">
+                            <span>Vanilindo</span><span aria-hidden="true">·</span>
+                            <time datetime="{{ ($article->published_at ?: $article->created_at)->toDateString() }}">{{ ($article->published_at ?: $article->created_at)->timezone('Asia/Jakarta')->format('d F Y') }}</time>
+                        </div>
+                    </div>
+                    <div class="journal-cover">
+                        <x-media-panel :path="$article->cover_image_path" fallback="images/canva/papua-community.jpg" :alt="$article->cover_image_alt ?: $article->title" loading="eager" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        @if(filled($article->body))
+            <div class="journal-shell journal-reading-layout">
+                <div class="journal-body prose">{!! $articleHtml !!}</div>
+            </div>
+        @endif
+    </article>
 @endsection

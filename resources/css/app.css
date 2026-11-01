@@ -172,10 +172,14 @@ img { display: block; max-width: 100%; }
 .blog-card:focus-visible { outline-offset: -5px; }
 .blog-card .media-panel { width: 100%; aspect-ratio: 3.66 / 1; }
 .blog-card .media-panel img { object-fit: cover; }
-.blog-card-copy { padding: .6cqw 1.4cqw 1.1cqw; }
-.blog-card h3 { font: 700 3.5cqw/1.4 Poppins, Arial, sans-serif; letter-spacing: .15em; text-transform: uppercase; margin-bottom: .7cqw; overflow-wrap: anywhere; }
-.blog-card p { font: 400 2cqw/1.5 var(--body); white-space: pre-line; overflow-wrap: anywhere; }
-.blog-card h3, .blog-card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.blog-card-copy { padding: clamp(20px, 2cqw, 36px); }
+.blog-card h3 { font: 700 clamp(22px, 2.15cqw, 38px)/1.35 Poppins, Arial, sans-serif; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 14px; overflow-wrap: anywhere; }
+.blog-card p { font: 400 clamp(17px, 1.32cqw, 21px)/1.65 var(--body); white-space: pre-line; overflow-wrap: anywhere; }
+.blog-card h3, .blog-card p { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+.blog-card h3 { -webkit-line-clamp: 3; }
+.blog-card p { -webkit-line-clamp: 4; }
+.blog-read-more { display: inline-flex; align-items: center; gap: 16px; margin-top: 22px; font: 700 12px/1.5 Poppins, Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--olive-dark); }
+.blog-read-more > span { font-size: 19px; line-height: 1; }
 .blog-arrow { display: grid; place-items: center; width: 100%; min-height: 44px; aspect-ratio: 1 / 2; padding: 0; border: 0; background: transparent; color: var(--paper); cursor: pointer; transition: opacity .2s; }
 .blog-arrow span { display: block; width: 100%; height: 100%; background: currentColor; clip-path: polygon(0 50%, 100% 0, 100% 100%); }
 .blog-arrow-next span { clip-path: polygon(0 0, 100% 50%, 0 100%); }
@@ -198,11 +202,70 @@ img { display: block; max-width: 100%; }
 .prose ol { list-style: decimal; padding-left: 1.5rem; }
 .prose h2, .prose h3 { font-family: var(--serif); color: var(--brown); margin-block: 2rem 1rem; font-size: 2rem; }
 .prose a { text-decoration: underline; }
-.article-page { padding: 5rem 0 8rem; }
-.article-page header { margin-bottom: 3rem; }
-.article-page .section-lead { max-width: 100%; font-size: 1.5rem; }
-.article-cover .media-panel { height: 480px; }
-.article-body { max-width: 800px; margin: 3rem auto; font-size: 1.12rem; }
+.journal-page { position: relative; isolation: isolate; min-height: calc(100svh - 64px); background: #fcfaf7; }
+.journal-page::after { content: ''; position: absolute; z-index: -1; right: 0; top: 680px; bottom: 0; width: min(28vw, 460px); background: url('/images/journal-botanical.svg') right 28px top / 100% auto repeat-y; opacity: .45; pointer-events: none; }
+.article-layout { --header-height: 64px; scroll-padding-top: var(--header-height); }
+.article-layout body { background: #fcfaf7; }
+.journal-shell { width: min(88%, 1280px); margin-inline: auto; }
+.journal-backbar { position: sticky; top: 0; z-index: 40; background: var(--brown); color: #faf5e8; border-bottom: 1px solid #ffffff20; }
+.journal-backbar > .journal-shell { min-height: 64px; display: flex; align-items: center; }
+.journal-back { display: inline-flex; gap: 12px; align-items: center; min-height: 44px; padding-block: 10px; color: #f4efdf; font: 700 11px/1 Poppins, Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.journal-back > svg { display: block; width: 20px; height: 20px; flex-shrink: 0; }
+.journal-back:hover { color: #d8c38f; text-decoration: underline; text-underline-offset: 5px; }
+.journal-hero { position: relative; isolation: isolate; overflow: hidden; background: var(--cream); border-bottom: 1px solid #623e2a20; padding: clamp(32px, 4vw, 64px) 0 clamp(48px, 5vw, 80px); }
+.journal-hero::before { content: ''; position: absolute; z-index: -1; right: -4%; top: -160px; width: min(48vw, 760px); height: calc(100% + 240px); background: url('/images/journal-botanical.svg') right top / contain no-repeat; opacity: .25; transform: rotate(12deg); pointer-events: none; }
+.journal-title { width: 100%; margin-bottom: 36px; }
+.journal-title h1 { margin: 0; font: 400 clamp(38px, 4vw, 72px)/1.12 var(--serif); color: var(--brown); overflow-wrap: anywhere; }
+.journal-heading-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 5vw, 80px); align-items: start; }
+.journal-summary { font: 400 clamp(18px, 1.4vw, 22px)/1.75 var(--body); color: #514b40; white-space: pre-line; overflow-wrap: anywhere; text-align: justify; text-justify: inter-word; hyphens: auto; }
+.journal-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; border-top: 1px solid #623e2a30; padding-top: 20px; margin-top: 30px; color: #655b4e; font: 400 11px/1.6 Poppins, Arial, sans-serif; }
+.journal-meta > span:first-child { font-weight: 700; color: var(--olive-dark); }
+.journal-cover { border: 8px solid #faf5e8; box-shadow: 16px 16px 0 #b5a074; }
+.journal-cover .media-panel { aspect-ratio: 4 / 3; }
+.journal-reading-layout { position: relative; max-width: 940px; width: min(88%, 940px); padding: clamp(40px, 4.5vw, 80px) clamp(32px, 5vw, 90px); margin-block: 48px 0; background: #fcfaf7; border-top: 1px solid #623e2a20; }
+.journal-reading-layout::before { content: ''; position: absolute; width: 60px; height: 1px; top: -26px; left: calc(50% - 30px); background: #819065; }
+.journal-page:has(.journal-reading-layout) { padding-bottom: 72px; }
+.journal-body { font: 400 clamp(17px, 1.1vw, 19px)/1.95 var(--body-serif); min-width: 0; }
+.journal-body p { text-align: justify; text-justify: inter-word; hyphens: auto; }
+.journal-body > :first-child { margin-top: 0; }
+.journal-body > p:first-child { font-size: 1.1em; color: var(--brown); }
+.journal-body h1, .journal-body h2, .journal-body h3, .journal-body h4 { font-family: var(--serif); font-weight: 400; color: var(--brown); margin: 42px 0 18px; line-height: 1.2; }
+.journal-body h1, .journal-body h2 { font-size: 34px; }
+.journal-body h3, .journal-body h4 { font-size: 28px; }
+.journal-body blockquote { border-left: 3px solid var(--olive); padding: 18px 24px; margin: 32px 0; background: var(--cream); font-style: italic; color: var(--brown); }
+.journal-body blockquote > :last-child { margin-bottom: 0; }
+.journal-body a { color: var(--olive-dark); text-underline-offset: 4px; }
+.journal-body img { height: auto; margin-block: 28px; }
+.journal-body pre { padding: 20px; overflow-x: auto; background: var(--cream); font-size: .85em; }
+.journal-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin-block: 24px; font-size: .9em; }
+.journal-body th, .journal-body td { border: 1px solid #623e2a33; padding: 10px 14px; }
+
+.whatsapp-widget { position: fixed; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 14px; font-family: Poppins, Arial, sans-serif; }
+.whatsapp-widget[hidden], .whatsapp-panel[hidden] { display: none; }
+.whatsapp-panel { width: 340px; max-width: calc(100vw - 32px); max-height: calc(100dvh - 120px); overflow-y: auto; background: #fcfaf7; border: 1px solid #623e2a14; border-radius: 12px; box-shadow: 0 16px 60px #25251d30; }
+.whatsapp-panel-heading { position: relative; padding: 24px 24px 26px; background: var(--olive-dark); color: white; }
+.whatsapp-label { display: flex; align-items: center; gap: 9px; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #e0e8c7; }
+.whatsapp-label svg { width: 18px; height: 18px; }
+.whatsapp-panel-heading h2 { font: 400 32px/1.2 var(--serif); margin-top: 24px; }
+.whatsapp-panel-heading p { font: 400 13px/1.65 var(--body); margin-top: 10px; max-width: 240px; color: #f4f1ede0; }
+.whatsapp-close { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border: 0; background: transparent; color: white; font-size: 28px; cursor: pointer; }
+.whatsapp-contacts { display: grid; gap: 10px; padding: 18px 16px 10px; }
+.whatsapp-contact { display: flex; gap: 12px; align-items: center; padding: 14px 12px; min-height: 80px; background: #efebe58c; border: 1px solid #623e2a0d; border-radius: 6px; }
+.whatsapp-contact:hover { background: #e8eddf; border-color: #5b762940; }
+.whatsapp-contact-number { width: 36px; height: 36px; flex-shrink: 0; display: grid; place-items: center; background: white; border-radius: 50%; font: 400 17px/1 var(--serif); color: var(--brown); }
+.whatsapp-contact-copy { min-width: 0; flex: 1; }
+.whatsapp-contact-copy strong { display: block; font-size: 12px; color: var(--brown); font-weight: 700; }
+.whatsapp-contact-copy > span { display: block; font-size: 11px; margin-top: 6px; color: #655b4e; }
+.whatsapp-contact-icon { width: 20px; height: 20px; color: var(--olive); flex-shrink: 0; }
+.whatsapp-note { padding: 4px 16px 18px; font-size: 10px; line-height: 1.5; color: #655b4e; text-align: center; }
+.whatsapp-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-width: 60px; height: 60px; padding: 0 22px; border: 1px solid #ffffff50; border-radius: 999px; background: var(--olive); color: white; box-shadow: 0 5px 24px #25251d33; cursor: pointer; transition: background .2s; }
+.whatsapp-toggle:hover { background: var(--olive-dark); }
+.whatsapp-toggle-icon { width: 28px; height: 28px; flex-shrink: 0; }
+.whatsapp-toggle-label { font-size: 12px; font-weight: 700; }
+.whatsapp-toggle-close { display: none; font-size: 32px; line-height: 1; }
+.whatsapp-toggle[aria-expanded="true"] { width: 60px; padding: 0; }
+.whatsapp-toggle[aria-expanded="true"] .whatsapp-toggle-icon, .whatsapp-toggle[aria-expanded="true"] .whatsapp-toggle-label { display: none; }
+.whatsapp-toggle[aria-expanded="true"] .whatsapp-toggle-close { display: block; }
 .contact-section { min-height: 520px; }
 .contact-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 8%; }
 .contact-grid .section-lead { max-width: 100%; margin: 0; font-size: clamp(1.25rem, 1.7cqw, 1.75rem); }
@@ -323,15 +386,29 @@ img { display: block; max-width: 100%; }
     .blog-track { gap: 1rem; }
     .blog-card .media-panel { aspect-ratio: 16 / 9; }
     .blog-card-copy { padding: 1rem; }
-    .blog-card h3 { font-size: clamp(1.15rem, 4cqw, 2rem); letter-spacing: .12em; margin-bottom: .75rem; }
-    .blog-card p { font-size: 1.05rem; line-height: 1.5; -webkit-line-clamp: 3; }
+    .blog-card h3 { font-size: clamp(19px, 3.5cqw, 28px); letter-spacing: .05em; margin-bottom: .75rem; }
+    .blog-card p { font-size: 16px; line-height: 1.65; -webkit-line-clamp: 5; }
     .blog-arrow { aspect-ratio: 1 / 1; padding: 0 8px; }
     .catalog-grid, .detail-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
     .catalog-card .media-panel { height: 260px; }
     .catalog-card-body { padding: 1.5rem; }
     .empty-state { margin: 0; padding: 3rem 1.25rem; }
     .detail-grid > .media-panel { height: 380px; }
-    .article-cover .media-panel { height: 260px; }
+    .journal-shell { width: calc(100% - 40px); }
+    .journal-hero { padding: 24px 0 48px; }
+    .journal-hero::before { right: -38%; top: 60px; width: 100%; opacity: .22; }
+    .journal-title { margin-bottom: 28px; }
+    .journal-heading-grid { grid-template-columns: 1fr; gap: 32px; }
+    .journal-title h1 { font-size: clamp(38px, 7vw, 62px); }
+    .journal-summary { font-size: 18px; }
+    .journal-cover { border-width: 6px; box-shadow: 8px 8px 0 #b5a074; }
+    .journal-cover .media-panel { aspect-ratio: 3 / 2; }
+    .journal-reading-layout { width: calc(100% - 32px); padding: 36px 24px 40px; margin-top: 32px; }
+    .journal-reading-layout::before { top: -18px; }
+    .journal-page:has(.journal-reading-layout) { padding-bottom: 32px; }
+    .whatsapp-widget { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+    .whatsapp-toggle { width: 60px; padding: 0; }
+    .whatsapp-toggle-label { display: none; }
     .contact-grid .display-title { font-size: 3rem; }
     .site-footer { min-height: 0; padding: 3rem 0 3.5rem; background-image: linear-gradient(#623e2acc, #623e2acc), url('/images/canva/footer-background.png'); background-position: right center; background-size: auto 100%; }
     .footer-content { width: calc(100% - 2.5rem); }

@@ -57,7 +57,7 @@ class AdminContentCrudTest extends TestCase
         Livewire::test(CreateArticle::class)
             ->fillForm([
                 'title' => 'Vanilla Origins',
-                'external_url' => 'https://example.com/vanilla-origins',
+                'body' => 'The story of our Indonesian vanilla origins.',
                 'cover_image_path' => UploadedFile::fake()->image('origins.jpg', 1200, 400),
                 'excerpt' => 'A description of our vanilla origins.',
                 'is_published' => false,
@@ -71,13 +71,13 @@ class AdminContentCrudTest extends TestCase
         ]);
     }
 
-    public function test_admin_can_upload_publish_and_edit_a_link_blog_without_slug_or_body(): void
+    public function test_admin_can_upload_publish_and_edit_an_internal_article(): void
     {
         Storage::fake('public');
 
         Livewire::test(CreateArticle::class)
             ->fillForm([
-                'title' => 'Vanilla Harvest', 'external_url' => 'https://example.com/harvest',
+                'title' => 'Vanilla Harvest', 'body' => "## Our harvest\n\nMeet our **vanilla farmers**.",
                 'cover_image_path' => UploadedFile::fake()->image('harvest.png', 1600, 450),
                 'excerpt' => 'Meet the farmers behind our vanilla.', 'is_published' => true,
             ])
@@ -85,32 +85,58 @@ class AdminContentCrudTest extends TestCase
 
         $article = Article::where('title', 'Vanilla Harvest')->firstOrFail();
         $this->assertNotEmpty($article->slug);
-        $this->assertNull($article->body);
+        $this->assertStringContainsString('vanilla farmers', $article->body);
+        $this->assertNull($article->external_url);
         Storage::disk('public')->assertExists($article->cover_image_path);
-        $this->get('/')->assertOk()->assertSee('Vanilla Harvest')->assertSee('https://example.com/harvest')
+        $this->get('/')->assertOk()->assertSee('Vanilla Harvest')->assertSee(route('blog.show', $article))
             ->assertSee(Storage::disk('public')->url($article->cover_image_path));
+        $this->get(route('blog.show', $article))->assertOk()->assertSee('<strong>vanilla farmers</strong>', false);
 
         Livewire::test(EditArticle::class, ['record' => $article->getRouteKey()])
-            ->fillForm(['title' => 'Updated Harvest', 'external_url' => 'https://example.com/new-harvest', 'is_published' => false])
+            ->fillForm(['title' => 'Updated Harvest', 'body' => 'Updated complete article.', 'is_published' => false])
             ->call('save')->assertHasNoFormErrors();
-        $this->assertSame('https://example.com/new-harvest', $article->fresh()->external_url);
+        $this->assertSame('Updated complete article.', $article->fresh()->body);
         $this->get('/')->assertOk()->assertDontSee('Updated Harvest');
+        $this->get(route('blog.show', $article))->assertNotFound();
     }
 
-    public function test_blog_requires_all_four_fields_and_rejects_non_web_links(): void
+    public function test_blog_requires_a_title_cover_summary_and_article_body(): void
     {
         Livewire::test(CreateArticle::class)->fillForm([
-            'title' => '', 'external_url' => '', 'excerpt' => '', 'cover_image_path' => null,
-        ])->call('create')->assertHasFormErrors(['title' => 'required', 'external_url' => 'required', 'excerpt' => 'required', 'cover_image_path' => 'required']);
+            'title' => '', 'body' => '', 'excerpt' => '', 'cover_image_path' => null,
+        ])->call('create')->assertHasFormErrors(['title' => 'required', 'body' => 'required', 'excerpt' => 'required', 'cover_image_path' => 'required']);
 
-        Storage::fake('public');
-        foreach (['javascript:alert(1)', 'ftp://example.com/file', 'not-a-url'] as $url) {
-            Livewire::test(CreateArticle::class)->fillForm([
-                'title' => 'Invalid Link', 'external_url' => $url, 'excerpt' => 'Description.',
-                'cover_image_path' => UploadedFile::fake()->image('cover.jpg'),
-            ])->call('create')->assertHasFormErrors(['external_url' => 'url']);
-        }
         $this->assertDatabaseCount('articles', 0);
+    }
+
+    public function test_new_blog_is_a_draft_until_admin_enables_publication(): void
+    {
+        Storage::fake('public');
+        Livewire::test(CreateArticle::class)->fillForm([
+            'title' => 'A work in progress', 'excerpt' => 'A preview for the homepage.',
+            'body' => 'The complete story is being prepared.',
+            'cover_image_path' => UploadedFile::fake()->image('cover.jpg'),
+        ])->call('create')->assertHasNoFormErrors();
+
+        $article = Article::firstOrFail();
+        $this->assertFalse($article->is_published);
+        $this->get(route('blog.show', $article))->assertNotFound();
+    }
+
+    public function test_legacy_link_blog_can_be_completed_without_changing_its_url(): void
+    {
+        Storage::fake('public');
+        Storage::disk('public')->put('articles/existing.jpg', 'existing cover');
+        $article = Article::create([
+            'title' => 'Existing story', 'slug' => 'existing-story', 'excerpt' => 'Existing summary.',
+            'external_url' => 'https://example.com/legacy', 'cover_image_path' => 'articles/existing.jpg',
+        ]);
+        Livewire::test(EditArticle::class, ['record' => $article->getRouteKey()])
+            ->fillForm(['body' => 'The newly written full article.', 'is_published' => true])
+            ->call('save')->assertHasNoFormErrors();
+
+        $this->assertSame('existing-story', $article->fresh()->slug);
+        $this->get('/blog/existing-story')->assertOk()->assertSee('The newly written full article.');
     }
 
     public function test_admin_can_upload_product_image(): void

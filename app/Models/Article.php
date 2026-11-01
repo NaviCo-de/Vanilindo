@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
@@ -19,14 +20,23 @@ class Article extends Model
         });
     }
 
-    public function externalLink(): ?string
+    public function scopePublished(Builder $query): Builder
     {
-        $url = trim((string) $this->external_url);
+        return $query->where('is_published', true)
+            ->where(fn (Builder $query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()));
+    }
 
-        return filter_var($url, FILTER_VALIDATE_URL)
-            && in_array(strtolower((string) parse_url($url, PHP_URL_SCHEME)), ['http', 'https'], true)
-                ? $url
-                : null;
+    public function summary(): string
+    {
+        return filled($this->excerpt) ? $this->excerpt : Str::limit($this->plainBody(), 240);
+    }
+
+    private function plainBody(): string
+    {
+        return trim(strip_tags(Str::markdown((string) $this->body, [
+            'html_input' => 'strip',
+            'allow_unsafe_links' => false,
+        ])));
     }
 
     protected function casts(): array
